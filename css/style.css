@@ -1,0 +1,10 @@
+.navbar,
+[class*="nav-"] {
+  --navbar-bg-color: SlateBlue;
+  --navbar-link-hover-color: PaleGreen;
+}
+
+[class*="foot"] {
+  --foot-main-bg-color: RoyalBlue;
+  --foot-list-link-hover-font-color: Tomato;
+}

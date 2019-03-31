@@ -1,5 +1,4 @@
-.navbar,
-[class*="nav-"] {
+[class*="nav"] {
   --navbar-bg-color: SlateBlue;
   --navbar-link-hover-color: PaleGreen;
 }

@@ -18,11 +18,11 @@ pre {
 }
 
 [class*="nav"] {
-  --navbar-bg-color: SlateBlue;
+  --navbar-bg: SlateBlue;
   --navbar-link-hover-color: PaleGreen;
 }
 
 [class*="foot"] {
-  --foot-main-bg-color: RoyalBlue;
+  --foot-main-bg: RoyalBlue;
   --foot-list-link-hover-font-color: Gold;
 }

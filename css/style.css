@@ -31,3 +31,11 @@ pre {
   --keyframes-content5: url(https://animadio.org/img/data/numbers/5.png);
   --play-check-slide-anima: 20s linear;
 }
+
+[class*="foot"] {
+  --foot-main-background-color: var(--amethyst);
+  --foot-title-color: var(--green);
+  --foot-list-link-font-color: var(--black);
+  --foot-list-link-hover-font-color: var(--white);
+}
+

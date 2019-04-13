@@ -1,0 +1,28 @@
+/***** STYLE *****/
+
+body {
+  --global-font-family: 'Text Me One', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --title-font-family: 'Cinzel', serif;
+}
+
+code,
+pre {
+  --pre-font-family: 'Share Tech Mono', monospace;
+}
+
+.slider {
+  --keyframes-content1: url(https://animadio.org/img/data/numbers/1.png);
+  --keyframes-content2: url(https://animadio.org/img/data/numbers/2.png);
+  --keyframes-content3: url(https://animadio.org/img/data/numbers/3.png);
+  --keyframes-content4: url(https://animadio.org/img/data/numbers/4.png);
+  --keyframes-content5: url(https://animadio.org/img/data/numbers/5.png);
+  --play-check-slide-anima: 20s linear;
+}

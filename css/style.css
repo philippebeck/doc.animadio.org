@@ -19,6 +19,10 @@ pre {
   --pre-font-family: 'Share Tech Mono', monospace;
 }
 
+[class*="nav"] {
+  --navbar-background-color: var(--sapphire);
+}
+
 .slider {
   --keyframes-content1: url(https://animadio.org/img/data/numbers/1.png);
   --keyframes-content2: url(https://animadio.org/img/data/numbers/2.png);

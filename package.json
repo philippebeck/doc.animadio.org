@@ -22,6 +22,9 @@
   "main": "index.html",
   "homepage": "https://doc.animadio.org",
   "repository": "github:animadio/doc.animadio.org",
+  "dependencies": {
+    "animadio": "^0.3.5"
+  },
   "bugs": "https://github.com/animadio/doc.animadio.org/issues",
   "author": {
     "name": "Philippe Beck",

@@ -1,6 +1,6 @@
 {
   "name": "doc.animadio.org",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Animadio Official Documentation - Grid & Flexbox Layouts - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons - No JavaScript needed or used",
   "keywords": [
     "css",
@@ -23,7 +23,7 @@
   "homepage": "https://doc.animadio.org",
   "repository": "github:animadio/doc.animadio.org",
   "dependencies": {
-    "animadio": "^0.3.7"
+    "animadio": "0.x"
   },
   "bugs": "https://github.com/animadio/doc.animadio.org/issues",
   "author": {

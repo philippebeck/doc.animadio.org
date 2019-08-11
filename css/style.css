@@ -1,8 +1,8 @@
 /***** STYLE *****/
 
 body {
-  --global-font-family: 'Text Me One', sans-serif;
-  --global-background-color: Lavender;
+  --body-font-family: 'Text Me One', sans-serif;
+  --body-background-color: Lavender;
 }
 
 h1,
@@ -24,7 +24,7 @@ h2 {
 
 code,
 pre {
-  --pre-font-family: 'Share Tech Mono', monospace;
+  --code-font-family: 'Share Tech Mono', monospace;
 }
 
 [class*="nav"] {
@@ -37,13 +37,13 @@ pre {
   --keyframes-content3: url(https://animadio.org/img/data/numbers/3.png);
   --keyframes-content4: url(https://animadio.org/img/data/numbers/4.png);
   --keyframes-content5: url(https://animadio.org/img/data/numbers/5.png);
-  --play-check-slide-anima: 20s linear;
+  --slider-check-play-animation: 20s linear;
 }
 
 [class*="foot"] {
-  --foot-main-background-color: var(--amethyst);
+  --foot-first-child-background-color: var(--amethyst);
   --foot-title-color: var(--green);
-  --foot-list-link-font-color: var(--black);
-  --foot-list-link-hover-font-color: var(--white);
+  --foot-first-child-list-link-font-color: var(--black);
+  --foot-first-child-list-link-hover-font-color: var(--white);
 }
 

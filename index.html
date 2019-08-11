@@ -55,14 +55,14 @@
 <nav class="navbar color-yellow-relay">
 
   <!-- Hidden Controls -->
-  <input id="nav-close" class="nav-close" type="radio" name="navbar" checked>
-  <input id="nav-open" class="nav-open" type="radio" name="navbar">
+  <input id="navbar-close" type="radio" name="navbar" checked>
+  <input id="navbar-open" type="radio" name="navbar">
 
-  <a class="nav-brand anima-tranx-base" href="https://animadio.org" title="Want to go back home ?">
+  <a class="anima-tranx-base" href="https://animadio.org" title="Want to go back home ?">
     <img src="https://animadio.org/img/logo-nav.png" alt="Animadio Logo">
   </a>
 
-  <ul class="nav-main">
+  <ul>
     <li>
       <label class="color-yellow-target1" for="global" title="Under Construction !">
         <i class="fas fa-infinity fa-lg" aria-hidden="true"></i>
@@ -89,7 +89,7 @@
     </li>
   </ul>
 
-  <ul class="nav-info">
+  <ul>
     <li>
       <a class="color-github-onto" href="https://github.com/animadio" rel="noreferrer noopener" target="_blank" title="Open-Source code is waiting to be read !">
         <i class="fab fa-github fa-lg" aria-hidden="true"></i>
@@ -112,19 +112,19 @@
     </li>
   </ul>
 
-  <label for="nav-close" class="nav-toggle" title="Fermer le Menu de Navigation">
+  <label for="navbar-close" title="Fermer le Menu de Navigation">
     <i class="fas fa-angle-double-up fa-lg" aria-hidden="true"></i>
   </label>
-  <label for="nav-open" class="nav-toggle" title="Ouvrir le Menu de Navigation">
+  <label for="navbar-open" title="Ouvrir le Menu de Navigation">
     <i class="fas fa-angle-double-down fa-lg" aria-hidden="true"></i>
   </label>
 </nav>
 
 <header>
-  <h1 class="text-center-xs shatex-blur-md-base">Animadio Doc</h1>
+  <h1 class="text-center shatex-blur-md-base">Animadio Doc</h1>
 </header>
 
-<main class="block-xs-relay container-80xs hide-xs-global text-center-xs">
+<main class="block-xs-relay container-80xs hide-xs-global text-center">
 
   <!----- Global ----->
   <article class="block-xs-target1">
@@ -315,38 +315,38 @@
       <header class="slider">
 
         <!-- Slider Hidden Controls -->
-        <input id="slide-play" class="play-check" type="checkbox" checked>
-        <input id="slide-repeat" class="repeat-check" type="checkbox" checked>
-        <input id="slide-direction" class="direction-check" type="checkbox">
-        <input id="slide1" class="slider-radio1" type="radio" name="slider" checked>
-        <input id="slide2" class="slider-radio2" type="radio" name="slider">
-        <input id="slide3" class="slider-radio3" type="radio" name="slider">
-        <input id="slide4" class="slider-radio4" type="radio" name="slider">
-        <input id="slide5" class="slider-radio5" type="radio" name="slider">
+        <input id="slider-check-play" type="checkbox" checked>
+        <input id="slider-check-repeat" type="checkbox" checked>
+        <input id="slider-check-direction" type="checkbox">
+        <input id="slider-radio1" type="radio" name="slider" checked>
+        <input id="slider-radio2" type="radio" name="slider">
+        <input id="slider-radio3" type="radio" name="slider">
+        <input id="slider-radio4" type="radio" name="slider">
+        <input id="slider-radio5" type="radio" name="slider">
 
         <!-- Slider Pictures -->
-        <figure class="slide">
-          <img class="slide1" src="https://animadio.org/img/data/numbers/1.png" alt="Your awesome alternate text">
-          <img class="slide2" src="https://animadio.org/img/data/numbers/2.png" alt="Your awesome alternate text">
-          <img class="slide3" src="https://animadio.org/img/data/numbers/3.png" alt="Your awesome alternate text">
-          <img class="slide4" src="https://animadio.org/img/data/numbers/4.png" alt="Your awesome alternate text">
-          <img class="slide5" src="https://animadio.org/img/data/numbers/5.png" alt="Your awesome alternate text">
+        <figure>
+          <img src="https://animadio.org/img/data/numbers/1.png" alt="Your awesome alternate text">
+          <img src="https://animadio.org/img/data/numbers/2.png" alt="Your awesome alternate text">
+          <img src="https://animadio.org/img/data/numbers/3.png" alt="Your awesome alternate text">
+          <img src="https://animadio.org/img/data/numbers/4.png" alt="Your awesome alternate text">
+          <img src="https://animadio.org/img/data/numbers/5.png" alt="Your awesome alternate text">
         </figure>
 
         <!-- Slider Visual Controls -->
-        <ul class="slider-controls">
+        <ul>
           <li>
-            <label for="slide-repeat" title="Repeat On/Off">
+            <label for="slider-check-repeat" title="Repeat On/Off">
               <i class="fas fa-plus-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide-play" title="Play/Stop">
+            <label for="slider-check-play" title="Play/Stop">
               <i class="fas fa-play-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide-direction" title="Direction Right/Left">
+            <label for="slider-check-direction" title="Direction Right/Left">
               <i class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></i>
             </label>
           </li>
@@ -356,34 +356,34 @@
             </a>
           </li>
           <li>
-            <label for="slide1" title="1st Picture">
+            <label for="slider-radio1" title="1st Picture">
               <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide2" title="2nd Picture">
+            <label for="slider-radio2" title="2nd Picture">
               <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide3" title="3rd Picture">
+            <label for="slider-radio3" title="3rd Picture">
               <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide4" title="4th Picture">
+            <label for="slider-radio4" title="4th Picture">
               <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide5" title="5th Picture">
+            <label for="slider-radio5" title="5th Picture">
               <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
         </ul>
 
         <!-- Timeline -->
-        <div class="slider-timeline"></div>
+        <div></div>
       </header>
     </article>
 
@@ -894,8 +894,8 @@
         <figure>
           <img src="img/logo.png" alt="#">
         </figure>
-        <h4>Title</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... </p>
+        <h4>Card</h4>
+        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
         <a class="btn" href="#">View More</a>
       </section>
 
@@ -903,8 +903,8 @@
         <figure>
           <img src="img/logo.png" alt="#">
         </figure>
-        <h4>Title</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... </p>
+        <h4>Card Black</h4>
+        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
         <a class="btn-white" href="#">View More</a>
       </section>
 
@@ -912,8 +912,8 @@
         <figure>
           <img src="img/logo.png" alt="#">
         </figure>
-        <h4>Title</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... </p>
+        <h4>Card Blue</h4>
+        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
         <a class="btn-sky" href="#">View More</a>
       </section>
 
@@ -921,8 +921,8 @@
         <figure>
           <img src="img/logo.png" alt="#">
         </figure>
-        <h4>Title</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... </p>
+        <h4>Card Green</h4>
+        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
         <a class="btn-jade" href="#">View More</a>
       </section>
 
@@ -930,8 +930,8 @@
         <figure>
           <img src="img/logo.png" alt="#">
         </figure>
-        <h4>Title</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... </p>
+        <h4>Card Red</h4>
+        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
         <a class="btn-tomato" href="#">View More</a>
       </section>
 
@@ -939,8 +939,8 @@
         <figure>
           <img src="img/logo.png" alt="#">
         </figure>
-        <h4>Title</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... </p>
+        <h4>Card Purple</h4>
+        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
         <a class="btn-violet" href="#">View More</a>
       </section>
 
@@ -948,8 +948,8 @@
         <figure>
           <img src="img/logo.png" alt="#">
         </figure>
-        <h4>Title</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... This is some text... </p>
+        <h4>Card Yellow</h4>
+        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
         <a class="btn-khaki" href="#">View More</a>
       </section>
     </article>
@@ -1324,10 +1324,10 @@
 </main>
 
 <footer class="foot">
-  <ul class="foot-main">
+  <ul>
     <li>
       <h3>Project</h3>
-      <ul class="foot-list">
+      <ul>
         <li>
           <a href="https://github.com/animadio/animadio" rel="noreferrer noopener" target="_blank">GitHub</a>
         </li>
@@ -1350,7 +1350,7 @@
     </li>
     <li>
       <h3>Community</h3>
-      <ul class="foot-list">
+      <ul>
         <li>
           <a href="https://join.slack.com/t/animadio/shared_invite/enQtNjAxMjg0OTUyODM5LWE5ZjNhNWYxMzVjZTdlMjhkNDhiNDVlYmQ1NjY3NTVhZGFmNDg2ODVhMmYyYmQwMDBkYmYyY2Q0NGQ5OGY3NWY" rel="noreferrer noopener" target="_blank">Slack</a>
         </li>
@@ -1370,7 +1370,7 @@
     </li>
     <li>
       <h3>Examples</h3>
-      <ul class="foot-list">
+      <ul>
         <li>
           <a href="https://codepen.io/animadio/pen/LamGvj" rel="noreferrer noopener" target="_blank">Btn</a>
         </li>
@@ -1398,20 +1398,20 @@
       </ul>
     </li>
   </ul>
-  <ul class="foot-info">
+  <ul>
     <li>
       <a class="color-npm-base" href="https://www.npmjs.com/package/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @NPM">
         <i class="fab fa-npm fa-3x" aria-hidden="true"></i>
       </a>
     </li>
     <li>
-      <a class="color-yellow-base" href="https://atmospherejs.com/animadio/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @AtmosphereJS">
-        <i class="fas fa-meteor fa-3x" aria-hidden="true"></i>
+      <a class="color-github-base" href="https://github.com/animadio/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @GitHub">
+        <i class="fab fa-github fa-3x" aria-hidden="true"></i>
       </a>
     </li>
     <li>
-      <a class="color-blue-base" href="https://packagist.org/packages/animadio/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @Packagist">
-        <i class="fab fa-php fa-3x" aria-hidden="true"></i>
+      <a class="color-jsd-base" href="https://www.jsdelivr.com/package/npm/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @JSDelivr">
+        <i class="fab fa-js-square fa-3x" aria-hidden="true"></i>
       </a>
     </li>
   </ul>

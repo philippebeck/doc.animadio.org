@@ -1,15 +1,14 @@
 [![Animadio Logo](https://animadio.org/img/logo.png)](https://doc.animadio.org)
 # [Animadio Official Documentation](https://doc.animadio.org)
 
-[![GitHub Version](https://img.shields.io/github/package-json/v/animadio/doc.animadio.org.svg?label=Version)](https://github.com/animadio/doc.animadio.org/blob/master/package.json)
-[![David Dev Dependencies](https://david-dm.org/animadio/doc.animadio.org/status.svg)](https://david-dm.org/animadio/doc.animadio.org)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/767b5613660d45f8903883a96c581816)](https://www.codacy.com/app/Animadio/doc.animadio.org?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=animadio/doc.animadio.org&amp;utm_campaign=Badge_Grade)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5b50d3da75163a2374ef/maintainability)](https://codeclimate.com/github/animadio/doc.animadio.org/maintainability)
 
 ## Overview
 
 This is the Official Documentation about the CSS Framework Animadio !
 
-**The documentation is under construction until the end of August...**
+**The version 1.0.0 of this documentation is under construction until the end of August...**
 
 ## Summary
 
@@ -38,14 +37,6 @@ This is the Official Documentation about the CSS Framework Animadio !
 ## Content
 
 [![CSS Code Size](https://img.shields.io/github/languages/code-size/animadio/doc.animadio.org.svg?label=Code+Size)](https://github.com/animadio/doc.animadio.org/tree/master)
-
----
-
-## Language
-
-Doc.animadio.org is wrote with HTML5
-
-[![GitHub Top Language](https://img.shields.io/github/languages/top/animadio/doc.animadio.org.svg?label=HTML5)](https://github.com/animadio/doc.animadio.org)
 
 ---
 

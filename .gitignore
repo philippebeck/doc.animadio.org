@@ -1,3 +1,4 @@
 .idea/
-node_modules/
-coming-soon.jpg
+config/bdd.php
+public/node_modules/
+vendor/

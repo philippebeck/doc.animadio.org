@@ -22,8 +22,8 @@
   "homepage": "https://doc.animadio.org",
   "repository": "github:animadio/doc.animadio.org",
   "dependencies": {
-    "animadio": "0.x",
-    "@fortawesome/fontawesome-free": "5.x"
+    "@fortawesome/fontawesome-free": "5.x",
+    "animadio": "0.x"
   },
   "bugs": "https://github.com/animadio/doc.animadio.org/issues",
   "author": {

@@ -14,7 +14,6 @@ This is the Official Documentation about the CSS Framework Animadio !
 
 -   [Download](#download)  
 -   [Content](#content)  
--   [Language](#language)  
 -   [Support](#support)  
 -   [Open-Source](#open-source)  
 -   [Issues](#issues)  

@@ -1,0 +1,24 @@
+{% extends 'layout/layout.twig' %}
+
+{% block subtitle %}States{% endblock %}
+
+{% block description %}Animadio Documentation about Animadio States : anima, bg, bord, color, deco, display, flow, position, shabox & shatex{% endblock %}
+
+{% block main %}
+
+<article>
+    <h2>States</h2>
+
+    {{ include("states/anima.twig") }}
+    {{ include("states/bg.twig") }}
+    {{ include("states/bord.twig") }}
+    {{ include("states/color.twig") }}
+    {{ include("states/deco.twig") }}
+    {{ include("states/display.twig") }}
+    {{ include("states/flow.twig") }}
+    {{ include("states/position.twig") }}
+    {{ include("states/shabox.twig") }}
+    {{ include("states/shatex.twig") }}
+
+</article>
+{% endblock %}

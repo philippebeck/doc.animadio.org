@@ -9,11 +9,44 @@
 <article>
     <h2>Global</h2>
 
-    {{ include("global/variables.twig") }}
-    {{ include("global/keyframes.twig") }}
-    {{ include("global/init.twig") }}
-    {{ include("global/box.twig") }}
-    {{ include("global/helpers.twig") }}
+    <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
+    <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
+    <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
+    <input id="menu-radio4" class="menu-radio4" type="radio" name="menu">
+    <input id="menu-radio5" class="menu-radio5" type="radio" name="menu">
 
+    <nav class="menu">
+        <label for="menu-radio1">
+            Variables
+            <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+        </label>
+        <label for="menu-radio2">
+            Keyframes
+            <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+        </label>
+        <label for="menu-radio3">
+            Init
+            <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+        </label>
+        <label for="menu-radio4">
+            Box
+            <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+        </label>
+        <label for="menu-radio5">
+            Helpers
+            <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+        </label>
+    </nav>
+
+    <section class="menu-relay">
+        <h3>Global Parts</h3>
+
+        {{ include("global/variables.twig") }}
+        {{ include("global/keyframes.twig") }}
+        {{ include("global/init.twig") }}
+        {{ include("global/box.twig") }}
+        {{ include("global/helpers.twig") }}
+
+    </section>
 </article>
 {% endblock %}

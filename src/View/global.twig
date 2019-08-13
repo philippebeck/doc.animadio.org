@@ -1,0 +1,19 @@
+{% extends 'layout/layout.twig' %}
+
+{% block subtitle %}Global{% endblock %}
+
+{% block description %}Animadio Documentation about Animadio Global : variables, keyframes, init, box & helpers{% endblock %}
+
+{% block main %}
+
+<article>
+    <h2>Global</h2>
+
+    {{ include("global/variables.twig") }}
+    {{ include("global/keyframes.twig") }}
+    {{ include("global/init.twig") }}
+    {{ include("global/box.twig") }}
+    {{ include("global/helpers.twig") }}
+
+</article>
+{% endblock %}

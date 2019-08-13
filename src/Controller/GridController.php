@@ -21,6 +21,6 @@ class GridController extends Controller
      */
     public function IndexAction()
     {
-        return $this->render('doc/grid.twig');
+        return $this->render('grid.twig');
     }
 }

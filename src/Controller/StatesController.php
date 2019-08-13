@@ -21,6 +21,6 @@ class StatesController extends Controller
      */
     public function IndexAction()
     {
-        return $this->render('doc/states.twig');
+        return $this->render('states.twig');
     }
 }

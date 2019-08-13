@@ -21,6 +21,6 @@ class ElementsController extends Controller
      */
     public function IndexAction()
     {
-        return $this->render('doc/elements.twig');
+        return $this->render('elements.twig');
     }
 }

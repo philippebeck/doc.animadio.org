@@ -21,6 +21,6 @@ class GlobalController extends Controller
      */
     public function IndexAction()
     {
-        return $this->render('doc/global.twig');
+        return $this->render('global.twig');
     }
 }

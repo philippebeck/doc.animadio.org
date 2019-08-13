@@ -1,0 +1,23 @@
+{% extends 'layout/layout.twig' %}
+
+{% block subtitle %}Elements{% endblock %}
+
+{% block description %}Animadio Documentation about Animadio Elements : btn, card, foot, form, gallery, menu, navbar, slider & table{% endblock %}
+
+{% block main %}
+
+<article>
+    <h2>Elements</h2>
+
+    {{ include("elements/btn.twig") }}
+    {{ include("elements/card.twig") }}
+    {{ include("elements/foot.twig") }}
+    {{ include("elements/form.twig") }}
+    {{ include("elements/gallery.twig") }}
+    {{ include("elements/menu.twig") }}
+    {{ include("elements/navbar.twig") }}
+    {{ include("elements/slider.twig") }}
+    {{ include("elements/table.twig") }}
+
+</article>
+{% endblock %}

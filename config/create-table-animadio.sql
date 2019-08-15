@@ -3,48 +3,46 @@ CREATE DATABASE animadio CHARACTER SET utf8;
 
 USE animadio;
 
-CREATE TABLE Property
+CREATE TABLE Media
 (
-    id              TINYINT         UNSIGNED        PRIMARY KEY     AUTO_INCREMENT,
-    name            VARCHAR(50)     NOT NULL        UNIQUE
-)
-    ENGINE=INNODB DEFAULT CHARSET=UTF8;
-
-CREATE TABLE Valor
-(
-    id              SMALLINT                UNSIGNED        PRIMARY KEY     AUTO_INCREMENT,
-    name            VARCHAR(50)             NOT NULL        UNIQUE
-)
-    ENGINE=INNODB DEFAULT CHARSET=UTF8;
-
-CREATE TABLE Variable
-(
-    id              SMALLINT                UNSIGNED        PRIMARY KEY     AUTO_INCREMENT,
-    name            VARCHAR(50)             NOT NULL        UNIQUE,
-    valor_id        SMALLINT                UNSIGNED        NOT NULL,
-    CONSTRAINT      variable_valor_id       FOREIGN KEY     (valor_id)      REFERENCES  Valor(id)
+    id              TINYINT         UNSIGNED    PRIMARY KEY     AUTO_INCREMENT,
+    name            CHAR(2)         NOT NULL    UNIQUE,
+    breakpoint      VARCHAR(10)     NOT NULL    UNIQUE
 )
     ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
 CREATE TABLE State
 (
-    id              TINYINT                 UNSIGNED        PRIMARY KEY     AUTO_INCREMENT,
-    name            VARCHAR(50)             NOT NULL        UNIQUE,
-    cause           VARCHAR(25)             NOT NULL,
-    target          VARCHAR(25)             NOT NULL
+    id          TINYINT         UNSIGNED    PRIMARY KEY     AUTO_INCREMENT,
+    launcher    VARCHAR(20)     NOT NULL    UNIQUE,
+    pivot       VARCHAR(10)     NOT NULL,
+    target      VARCHAR(20)     NOT NULL    UNIQUE
 )
     ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
-CREATE TABLE Effect
+CREATE TABLE Property
+(
+    id      TINYINT         UNSIGNED    PRIMARY KEY     AUTO_INCREMENT,
+    name    VARCHAR(30)     NOT NULL    UNIQUE
+)
+    ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE Variable
+(
+    id      SMALLINT        UNSIGNED    PRIMARY KEY     AUTO_INCREMENT,
+    name    VARCHAR(50)     NOT NULL    UNIQUE
+)
+    ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE Class
 (
     id              SMALLINT                UNSIGNED        PRIMARY KEY     AUTO_INCREMENT,
-    name            VARCHAR(25)             NOT NULL        UNIQUE,
+    name            VARCHAR(20)             NOT NULL        UNIQUE,
     property_id     TINYINT                 UNSIGNED        NOT NULL,
-    valor_id        SMALLINT                UNSIGNED        NOT NULL,
-    variable_id     SMALLINT                UNSIGNED,
+    variable_id     SMALLINT                UNSIGNED        NOT NULL,
     state           TINYINT                 UNSIGNED        NOT NULL,
+    media           TINYINT                 UNSIGNED        NOT NULL,
     CONSTRAINT      selector_property_id    FOREIGN KEY     (property_id)   REFERENCES  Property(id),
-    CONSTRAINT      selector_valor_id       FOREIGN KEY     (valor_id)      REFERENCES  Valor(id),
     CONSTRAINT      selector_variable_id    FOREIGN KEY     (variable_id)   REFERENCES  Variable(id)
 )
     ENGINE=INNODB DEFAULT CHARSET=UTF8;

@@ -7,8 +7,8 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Variable</th>
             <th>Property</th>
+            <th>Variable</th>
             <th>Media</th>
             <th>Concat</th>
             <th>State</th>
@@ -19,8 +19,8 @@
         {% for position in allPositionClasses %}
             <tr>
                 <th>{{ position.class }}</th>
-                <td>{{ position.variable }}</td>
                 <td>{{ position.property }}</td>
+                <td>{{ position.variable }}</td>
                 <td>{{ position.media|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ position.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ position.state|replace({'1': "yes", '0': "no"}) }}</td>

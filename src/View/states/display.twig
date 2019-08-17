@@ -7,8 +7,8 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Variable</th>
             <th>Property</th>
+            <th>Variable</th>
             <th>Media</th>
             <th>Concat</th>
             <th>State</th>
@@ -19,8 +19,8 @@
         {% for display in allDisplayClasses %}
             <tr>
                 <th>{{ display.class }}</th>
-                <td>{{ display.variable }}</td>
                 <td>{{ display.property }}</td>
+                <td>{{ display.variable }}</td>
                 <td>{{ display.media|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ display.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ display.state|replace({'1': "yes", '0': "no"}) }}</td>

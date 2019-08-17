@@ -7,8 +7,8 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Variable</th>
             <th>Property</th>
+            <th>Variable</th>
             <th>Media</th>
             <th>Concat</th>
             <th>State</th>
@@ -19,8 +19,8 @@
         {% for bg in allBgClasses %}
             <tr>
                 <th>{{ bg.class }}</th>
-                <td>{{ bg.variable }}</td>
                 <td>{{ bg.property }}</td>
+                <td>{{ bg.variable }}</td>
                 <td>{{ bg.media|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ bg.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ bg.state|replace({'1': "yes", '0': "no"}) }}</td>

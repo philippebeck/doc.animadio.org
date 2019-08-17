@@ -7,8 +7,8 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Variable</th>
             <th>Property</th>
+            <th>Variable</th>
             <th>Media</th>
             <th>Concat</th>
             <th>State</th>
@@ -19,8 +19,8 @@
         {% for anima in allAnimaClasses %}
             <tr>
                 <th>{{ anima.class }}</th>
-                <td>{{ anima.variable }}</td>
                 <td>{{ anima.property }}</td>
+                <td>{{ anima.variable }}</td>
                 <td>{{ anima.media|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ anima.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ anima.state|replace({'1': "yes", '0': "no"}) }}</td>

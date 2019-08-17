@@ -1,4 +1,4 @@
 .idea/
-config/bdd.php
+config/db.php
 public/node_modules/
 vendor/

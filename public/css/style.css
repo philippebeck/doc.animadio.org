@@ -43,11 +43,3 @@ pre {
   --keyframes-content5: url(https://animadio.org/img/data/numbers/5.png);
   --slider-check-play-animation: 20s linear;
 }
-
-[class*="foot"] {
-  --foot-first-child-background-color: var(--amethyst);
-  --foot-title-color: var(--green);
-  --foot-first-child-list-link-font-color: var(--black);
-  --foot-first-child-list-link-hover-font-color: var(--white);
-}
-

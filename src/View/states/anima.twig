@@ -1,4 +1,31 @@
 <article class="menu-target1">
     <h3>Anima</h3>
 
+    <table class="table">
+        <caption>Anima</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Variable</th>
+            <th>Property</th>
+            <th>Media</th>
+            <th>Concat</th>
+            <th>State</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for anima in allAnimaClasses %}
+            <tr>
+                <th>{{ anima.class }}</th>
+                <td>{{ anima.variable }}</td>
+                <td>{{ anima.property }}</td>
+                <td>{{ anima.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ anima.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ anima.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

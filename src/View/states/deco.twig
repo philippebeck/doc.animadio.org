@@ -1,4 +1,31 @@
 <article class="menu-target5">
     <h3>Deco</h3>
 
+    <table class="table">
+        <caption>Deco</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Variable</th>
+            <th>Property</th>
+            <th>Media</th>
+            <th>Concat</th>
+            <th>State</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for deco in allDecoClasses %}
+            <tr>
+                <th>{{ deco.class }}</th>
+                <td>{{ deco.variable }}</td>
+                <td>{{ deco.property }}</td>
+                <td>{{ deco.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ deco.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ deco.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

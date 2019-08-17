@@ -1,4 +1,31 @@
 <article class="menu-target3">
     <h3>Bord</h3>
 
+    <table class="table">
+        <caption>Bord</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Variable</th>
+            <th>Property</th>
+            <th>Media</th>
+            <th>Concat</th>
+            <th>State</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for bord in allBordClasses %}
+            <tr>
+                <th>{{ bord.class }}</th>
+                <td>{{ bord.variable }}</td>
+                <td>{{ bord.property }}</td>
+                <td>{{ bord.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ bord.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ bord.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

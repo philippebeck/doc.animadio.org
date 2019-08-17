@@ -1,4 +1,31 @@
-<article class="menu-target0">
+<article class="menu-target9">
     <h3>Shatex</h3>
 
+    <table class="table">
+        <caption>Shatex</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Variable</th>
+            <th>Property</th>
+            <th>Media</th>
+            <th>Concat</th>
+            <th>State</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for shatex in allShatexClasses %}
+            <tr>
+                <th>{{ shatex.class }}</th>
+                <td>{{ shatex.variable }}</td>
+                <td>{{ shatex.property }}</td>
+                <td>{{ shatex.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ shatex.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ shatex.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

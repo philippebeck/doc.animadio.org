@@ -53,11 +53,6 @@ class StatesController extends Controller
     /**
      * @var array
      */
-    private $allFlowClasses = array();
-
-    /**
-     * @var array
-     */
     private $allPositionClasses = array();
 
     /**
@@ -95,8 +90,6 @@ class StatesController extends Controller
                     break;
                 case 'display': $this->allDisplayClasses[] = $statesClass;
                     break;
-                case 'flow': $this->allFlowClasses[] = $statesClass;
-                    break;
                 case 'position': $this->allPositionClasses[] = $statesClass;
                     break;
                 case 'shabox': $this->allShaboxClasses[] = $statesClass;
@@ -122,7 +115,6 @@ class StatesController extends Controller
             'allColorClasses'       => $this->allColorClasses,
             'allDecoClasses'        => $this->allDecoClasses,
             'allDisplayClasses'     => $this->allDisplayClasses,
-            'allFlowClasses'        => $this->allFlowClasses,
             'allPositionClasses'    => $this->allPositionClasses,
             'allShaboxClasses'      => $this->allShaboxClasses,
             'allShatexClasses'      => $this->allShatexClasses,

@@ -1,33 +1,48 @@
 USE animadio;
 
-INSERT INTO Media
-(name,      breakpoint)
+INSERT INTO Part
+(part)
 VALUES
-('xs',      'none'),
-('sm',      '576px'),
-('md',      '768px'),
-('lg',      '992px'),
-('xl',      '1200px');
+('global'),
+('grid'),
+('elements'),
+('states');
 
-INSERT INTO State
-(launcher,              pivot,      target)
+INSERT INTO Source
+(source)
 VALUES
-('base',                'none',     'base'),
-('global',              'none',     'global-children'),
-('into-parent-hover',   'none',     'into'),
-('onto-hover',          'none',     'onto'),
-('toall-hover',         'none',     'toall-children'),
-('toone-child-hover',   'none',     'toone-child'),
-('check-checked',       'hub',      'goal'),
-('radio1-checked',      'relay',    'target1'),
-('radio2-checked',      'relay',    'target2'),
-('radio3-checked',      'relay',    'target3'),
-('radio4-checked',      'relay',    'target4'),
-('radio5-checked',      'relay',    'target5');
+('variables'),
+('keyframes'),
+('init'),
+('box'),
+('helpers'),
+('grid'),
+('flex'),
+('place'),
+('btn'),
+('card'),
+('foot'),
+('form'),
+('gallery'),
+('menu'),
+('navbar'),
+('slider'),
+('table'),
+('anima'),
+('bg'),
+('bord'),
+('color'),
+('deco'),
+('display'),
+('flow'),
+('position'),
+('shabox'),
+('shatex');
 
 INSERT INTO Property
-(name)
+(property)
 VALUES
+('Multiple Properties'),
 ('animation'),
 ('animation-delay'),
 ('animation-direction'),
@@ -104,8 +119,10 @@ VALUES
 ('z-index');
 
 INSERT INTO Variable
-(name)
+(variable)
 VALUES
+('No Variable'),
+('Multiple Variables'),
 ('--amethyst'),
 ('--animation-delay'),
 ('--animation-delay-large'),
@@ -696,4 +713,77 @@ VALUES
 ('--white'),
 ('--width-lg'),
 ('--width-md'),
-('--width-sm');
+('--width-sm'),
+('--yellow');
+
+
+INSERT INTO Class
+(class,                 part_id,    source_id,      property_id,    variable_id,    media,      concat,     state)
+VALUES
+('anima',               '4',        '18',           '1',            '2',            '0',        '1',        '1'),
+('anima-rota',          '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-rotax',         '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-rotay',         '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-scal',          '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-scalx',         '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-scaly',         '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-skew',          '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-skewx',         '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-skewy',         '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-tran',          '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-tranx',         '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-trany',         '4',        '18',           '8',            '1',            '0',        '1',        '1'),
+('anima-xs',            '4',        '18',           '5',            '10',           '0',        '1',        '1'),
+('anima-sm',            '4',        '18',           '5',            '11',           '0',        '1',        '1'),
+('anima-md',            '4',        '18',           '5',            '12',           '0',        '1',        '1'),
+('anima-lg',            '4',        '18',           '5',            '13',           '0',        '1',        '1'),
+('anima-xl',            '4',        '18',           '5',            '14',           '0',        '1',        '1'),
+('anima-linear',        '4',        '18',           '9',            '1',            '0',        '1',        '1'),
+('anima-ease',          '4',        '18',           '9',            '22',           '0',        '1',        '1'),
+('anima-steps',         '4',        '18',           '9',            '23',           '0',        '1',        '1'),
+('anima-bezier',        '4',        '18',           '9',            '21',           '0',        '1',        '1'),
+('anima-few',           '4',        '18',           '7',            '17',           '0',        '1',        '1'),
+('anima-many',          '4',        '18',           '7',            '18',           '0',        '1',        '1'),
+('anima-loop',          '4',        '18',           '7',            '1',            '0',        '1',        '1'),
+('anima-alter',         '4',        '18',           '4',            '1',            '0',        '1',        '1'),
+('anima-rever',         '4',        '18',           '4',            '1',            '0',        '1',        '1'),
+('anima-altrev',        '4',        '18',           '4',            '1',            '0',        '1',        '1'),
+('anima-small',         '4',        '18',           '3',            '7',            '0',        '1',        '1'),
+('anima-medium',        '4',        '18',           '3',            '6',            '0',        '1',        '1'),
+('anima-large',         '4',        '18',           '3',            '5',            '0',        '1',        '1'),
+('anima-back',          '4',        '18',           '6',            '1',            '0',        '1',        '1'),
+('anima-front',         '4',        '18',           '6',            '1',            '0',        '1',        '1'),
+('anima-far',           '4',        '18',           '71',           '587',          '0',        '1',        '1'),
+('anima-near',          '4',        '18',           '71',           '586',          '0',        '1',        '1'),
+('bg-black',            '4',        '19',           '10',           '25',           '0',        '1',        '1'),
+('bg-blue',             '4',        '19',           '10',           '26',           '0',        '1',        '1'),
+('bg-choco',            '4',        '19',           '10',           '172',          '0',        '1',        '1'),
+('bg-gray',             '4',        '19',           '10',           '321',          '0',        '1',        '1'),
+('bg-green',            '4',        '19',           '10',           '322',          '0',        '1',        '1'),
+('bg-jade',             '4',        '19',           '10',           '329',          '0',        '1',        '1'),
+('bg-khaki',            '4',        '19',           '10',           '351',          '0',        '1',        '1'),
+('bg-maroon',           '4',        '19',           '10',           '375',          '0',        '1',        '1'),
+('bg-orange',           '4',        '19',           '10',           '450',          '0',        '1',        '1'),
+('bg-purple',           '4',        '19',           '10',           '475',          '0',        '1',        '1'),
+('bg-red',              '4',        '19',           '10',           '477',          '0',        '1',        '1'),
+('bg-salmon',           '4',        '19',           '10',           '480',          '0',        '1',        '1'),
+('bg-silver',           '4',        '19',           '10',           '482',          '0',        '1',        '1'),
+('bg-sky',              '4',        '19',           '10',           '483',          '0',        '1',        '1'),
+('bg-tomato',           '4',        '19',           '10',           '585',          '0',        '1',        '1'),
+('bg-violet',           '4',        '19',           '10',           '589',          '0',        '1',        '1'),
+('bg-white',            '4',        '19',           '10',           '590',          '0',        '1',        '1'),
+('bg-yellow',           '4',        '19',           '10',           '594',          '0',        '1',        '1'),
+('bg-fb',               '4',        '19',           '10',           '181',          '0',        '1',        '1'),
+('bg-github',           '4',        '19',           '10',           '320',          '0',        '1',        '1'),
+('bg-jsd',              '4',        '19',           '10',           '330',          '0',        '1',        '1'),
+('bg-linkedin',         '4',        '19',           '10',           '353',          '0',        '1',        '1'),
+('bg-npm',              '4',        '19',           '10',           '448',          '0',        '1',        '1'),
+('bg-stack',            '4',        '19',           '10',           '523',          '0',        '1',        '1'),
+('bg-tw',               '4',        '19',           '10',           '588',          '0',        '1',        '1'),
+('amethyst',            '4',        '19',           '10',           '3',            '0',        '1',        '1'),
+('citrine',             '4',        '19',           '10',           '173',          '0',        '1',        '1'),
+('emerald',             '4',        '19',           '10',           '180',          '0',        '1',        '1'),
+('quartz',              '4',        '19',           '10',           '476',          '0',        '1',        '1'),
+('obsidian',            '4',        '19',           '10',           '449',          '0',        '1',        '1'),
+('ruby',                '4',        '19',           '10',           '479',          '0',        '1',        '1'),
+('sapphire',            '4',        '19',           '10',           '481',          '0',        '1',        '1');

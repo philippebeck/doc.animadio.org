@@ -7,8 +7,8 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Variable</th>
             <th>Property</th>
+            <th>Variable</th>
             <th>Media</th>
             <th>Concat</th>
             <th>State</th>
@@ -19,8 +19,8 @@
         {% for color in allColorClasses %}
             <tr>
                 <th>{{ color.class }}</th>
-                <td>{{ color.variable }}</td>
                 <td>{{ color.property }}</td>
+                <td>{{ color.variable }}</td>
                 <td>{{ color.media|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ color.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ color.state|replace({'1': "yes", '0': "no"}) }}</td>

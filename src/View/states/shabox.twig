@@ -7,8 +7,8 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Variable</th>
             <th>Property</th>
+            <th>Variable</th>
             <th>Media</th>
             <th>Concat</th>
             <th>State</th>
@@ -19,8 +19,8 @@
         {% for shabox in allShaboxClasses %}
             <tr>
                 <th>{{ shabox.class }}</th>
-                <td>{{ shabox.variable }}</td>
                 <td>{{ shabox.property }}</td>
+                <td>{{ shabox.variable }}</td>
                 <td>{{ shabox.media|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ shabox.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ shabox.state|replace({'1': "yes", '0': "no"}) }}</td>

@@ -1,17 +1,23 @@
 <article class="menu-target5">
     <h3>Deco</h3>
 
+    <section class="card-blue">
+        <h4>Deco</h4>
+        <p>You need to add a state keyword to use the Deco classes...</p>
+        <a class="btn-sky" href="https://github.com/animadio/animadio/blob/master/src/states/deco.css">View Deco Source Code</a>
+    </section>
+
     <table class="table">
-        <caption>Deco</caption>
+        <caption>Deco Datas</caption>
 
         <thead>
         <tr>
             <th>Class</th>
             <th>Property</th>
-            <th>Variable</th>
-            <th>Media</th>
-            <th>Concat</th>
-            <th>State</th>
+            <th><a href="{{ url('global') }}" title="How to use Variables ?">Variable</a></th>
+            <th>@media</th>
+            <th><a href="{{ url('grid') }}" title="How to Concat ?">Concat</a></th>
+            <th><a href="{{ url('states') }}" title="How States work ?">States</a></th>
         </tr>
         </thead>
 
@@ -21,7 +27,7 @@
                 <th>{{ deco.class }}</th>
                 <td>{{ deco.property }}</td>
                 <td>{{ deco.variable }}</td>
-                <td>{{ deco.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ deco.screen }}</td>
                 <td>{{ deco.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ deco.state|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>

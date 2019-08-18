@@ -1,17 +1,23 @@
 <article class="menu-target1">
-    <h3>Grid & Fluid</h3>
+    <h3>Grid | Fluid</h3>
+
+    <section class="card-red">
+        <h4>Grid | Fluid Infos</h4>
+        <p>You can concat each media keywords with the Grid | Fluid classes...</p>
+        <a class="btn-tomato" href="https://github.com/animadio/animadio/blob/master/src/grid/fluid.css">View Grid|Fluid Source Code</a>
+    </section>
 
     <table class="table">
-        <caption>Grid & Fluid</caption>
+        <caption>Grid | Fluid Datas</caption>
 
         <thead>
         <tr>
             <th>Class</th>
             <th>Property</th>
-            <th>Variable</th>
-            <th>Media</th>
-            <th>Concat</th>
-            <th>State</th>
+            <th><a href="{{ url('global') }}" title="How to use Variables ?">Variable</a></th>
+            <th>@media</th>
+            <th><a href="{{ url('grid') }}" title="How to Concat ?">Concat</a></th>
+            <th><a href="{{ url('states') }}" title="How States work ?">States</a></th>
         </tr>
         </thead>
 
@@ -21,7 +27,7 @@
                 <th>{{ fluid.class }}</th>
                 <td>{{ fluid.property }}</td>
                 <td>{{ fluid.variable }}</td>
-                <td>{{ fluid.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ fluid.screen }}</td>
                 <td>{{ fluid.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ fluid.state|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>

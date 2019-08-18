@@ -1,17 +1,23 @@
 <article class="menu-target1">
     <h3>Anima</h3>
 
-    <table class="table">
-        <caption>Anima</caption>
+    <section class="card-blue">
+        <h4>Anima Infos</h4>
+        <p>Anima classes are designed to provide animations through a concatenated classname, composed with common options such as duration, delay, iteration, direction, etc...</p>
+        <a class="btn-sky" href="https://github.com/animadio/animadio/blob/master/src/states/anima.css">View Anima Source Code</a>
+    </section>
+
+    <table id="anima-datas" class="table">
+        <caption>Anima Datas</caption>
 
         <thead>
         <tr>
             <th>Class</th>
             <th>Property</th>
-            <th>Variable</th>
-            <th>Media</th>
-            <th>Concat</th>
-            <th>State</th>
+            <th><a href="{{ url('global') }}" title="How to use Variables ?">Variable</a></th>
+            <th>@media</th>
+            <th><a href="{{ url('grid') }}" title="How to Concat ?">Concat</a></th>
+            <th><a href="{{ url('states') }}" title="How States work ?">States</a></th>
         </tr>
         </thead>
 
@@ -21,7 +27,7 @@
                 <th>{{ anima.class }}</th>
                 <td>{{ anima.property }}</td>
                 <td>{{ anima.variable }}</td>
-                <td>{{ anima.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ anima.screen }}</td>
                 <td>{{ anima.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ anima.state|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>

@@ -17,6 +17,7 @@ class ClassModel extends Model
                     INNER JOIN Source ON Class.source_id = Source.id 
                     INNER JOIN Property ON Class.property_id = Property.id 
                     INNER JOIN Variable ON Class.variable_id = Variable.id
+                    INNER JOIN Media ON Class.media_id = Media.id
                     WHERE part_id = ' . $id;
 
         return $this->database->getAllData($query);

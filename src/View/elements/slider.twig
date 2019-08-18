@@ -74,4 +74,32 @@
         <!-- Timeline -->
         <div></div>
     </header>
+
+    <table class="table">
+        <caption>Slider Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th><a href="{{ url('global') }}" title="How to use Variables ?">Variable</a></th>
+            <th>@media</th>
+            <th><a href="{{ url('grid') }}" title="How to Concat ?">Concat</a></th>
+            <th><a href="{{ url('states') }}" title="How States work ?">States</a></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for slider in allSliderClasses %}
+            <tr>
+                <th>{{ slider.class }}</th>
+                <td>{{ slider.property }}</td>
+                <td>{{ slider.variable }}</td>
+                <td>{{ slider.screen }}</td>
+                <td>{{ slider.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ slider.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

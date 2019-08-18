@@ -495,4 +495,32 @@
             </li>
         </ul>
     </section>
+
+    <table class="table">
+        <caption>Btn|Button Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th><a href="{{ url('global') }}" title="How to use Variables ?">Variable</a></th>
+            <th>@media</th>
+            <th><a href="{{ url('grid') }}" title="How to Concat ?">Concat</a></th>
+            <th><a href="{{ url('states') }}" title="How States work ?">States</a></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for btn in allBtnClasses %}
+            <tr>
+                <th>{{ btn.class }}</th>
+                <td>{{ btn.property }}</td>
+                <td>{{ btn.variable }}</td>
+                <td>{{ btn.screen }}</td>
+                <td>{{ btn.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ btn.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

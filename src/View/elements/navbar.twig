@@ -15,4 +15,32 @@
         <i class="fab fa-github fa-lg" aria-hidden="true"></i>
         Navbar CSS
     </a>
+
+    <table class="table">
+        <caption>Navbar Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th><a href="{{ url('global') }}" title="How to use Variables ?">Variable</a></th>
+            <th>@media</th>
+            <th><a href="{{ url('grid') }}" title="How to Concat ?">Concat</a></th>
+            <th><a href="{{ url('states') }}" title="How States work ?">States</a></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for navbar in allNavbarClasses %}
+            <tr>
+                <th>{{ navbar.class }}</th>
+                <td>{{ navbar.property }}</td>
+                <td>{{ navbar.variable }}</td>
+                <td>{{ navbar.screen }}</td>
+                <td>{{ navbar.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ navbar.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

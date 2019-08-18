@@ -59,4 +59,32 @@
             </ul>
         </fieldset>
     </form>
+
+    <table class="table">
+        <caption>Form Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th><a href="{{ url('global') }}" title="How to use Variables ?">Variable</a></th>
+            <th>@media</th>
+            <th><a href="{{ url('grid') }}" title="How to Concat ?">Concat</a></th>
+            <th><a href="{{ url('states') }}" title="How States work ?">States</a></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for form in allFormClasses %}
+            <tr>
+                <th>{{ form.class }}</th>
+                <td>{{ form.property }}</td>
+                <td>{{ form.variable }}</td>
+                <td>{{ form.screen }}</td>
+                <td>{{ form.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ form.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

@@ -115,7 +115,7 @@ class StatesController extends Controller
             'allDisplayClasses'     => $this->allDisplayClasses,
             'allPositionClasses'    => $this->allPositionClasses,
             'allShaboxClasses'      => $this->allShaboxClasses,
-            'allShatexClasses'      => $this->allShatexClasses,
+            'allShatexClasses'      => $this->allShatexClasses
         ]);
     }
 }

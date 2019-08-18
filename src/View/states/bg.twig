@@ -1,17 +1,23 @@
 <article class="menu-target2">
     <h3>BG</h3>
 
+    <section class="card-blue">
+        <h4>Bg</h4>
+        <p>You need to add a state keyword to use the Bg classes...</p>
+        <a class="btn-sky" href="https://github.com/animadio/animadio/blob/master/src/states/bg.css">View Bg Source Code</a>
+    </section>
+
     <table class="table">
-        <caption>BG</caption>
+        <caption>Bg Datas</caption>
 
         <thead>
         <tr>
             <th>Class</th>
             <th>Property</th>
-            <th>Variable</th>
-            <th>Media</th>
-            <th>Concat</th>
-            <th>State</th>
+            <th><a href="{{ url('global') }}" title="How to use Variables ?">Variable</a></th>
+            <th>@media</th>
+            <th><a href="{{ url('grid') }}" title="How to Concat ?">Concat</a></th>
+            <th><a href="{{ url('states') }}" title="How States work ?">States</a></th>
         </tr>
         </thead>
 
@@ -21,7 +27,7 @@
                 <th>{{ bg.class }}</th>
                 <td>{{ bg.property }}</td>
                 <td>{{ bg.variable }}</td>
-                <td>{{ bg.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ bg.screen }}</td>
                 <td>{{ bg.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ bg.state|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>

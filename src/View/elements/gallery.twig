@@ -1,4 +1,31 @@
 <article class="menu-target5">
     <h3>Gallery</h3>
 
+    <table class="table">
+        <caption>Gallery Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th><a href="{{ url('global') }}" title="How to use Variables ?">Variable</a></th>
+            <th>@media</th>
+            <th><a href="{{ url('grid') }}" title="How to Concat ?">Concat</a></th>
+            <th><a href="{{ url('states') }}" title="How States work ?">States</a></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for gallery in allGalleryClasses %}
+            <tr>
+                <th>{{ gallery.class }}</th>
+                <td>{{ gallery.property }}</td>
+                <td>{{ gallery.variable }}</td>
+                <td>{{ gallery.screen }}</td>
+                <td>{{ gallery.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ gallery.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

@@ -99,4 +99,32 @@
         </tr>
         </tbody>
     </table>
+
+    <table class="table">
+        <caption>Table Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th>Variable</th>
+            <th>Media</th>
+            <th>Concat</th>
+            <th>State</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for table in allTableClasses %}
+            <tr>
+                <th>{{ table.class }}</th>
+                <td>{{ table.property }}</td>
+                <td>{{ table.variable }}</td>
+                <td>{{ table.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ table.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ table.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

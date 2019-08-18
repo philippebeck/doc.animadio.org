@@ -63,4 +63,32 @@
         <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
         <a class="btn-khaki" href="#">View More</a>
     </section>
+
+    <table class="table">
+        <caption>Card Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th>Variable</th>
+            <th>Media</th>
+            <th>Concat</th>
+            <th>State</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for card in allCardClasses %}
+            <tr>
+                <th>{{ card.class }}</th>
+                <td>{{ card.property }}</td>
+                <td>{{ card.variable }}</td>
+                <td>{{ card.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ card.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ card.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

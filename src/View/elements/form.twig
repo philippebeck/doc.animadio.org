@@ -59,4 +59,32 @@
             </ul>
         </fieldset>
     </form>
+
+    <table class="table">
+        <caption>Form Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th>Variable</th>
+            <th>Media</th>
+            <th>Concat</th>
+            <th>State</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for form in allFormClasses %}
+            <tr>
+                <th>{{ form.class }}</th>
+                <td>{{ form.property }}</td>
+                <td>{{ form.variable }}</td>
+                <td>{{ form.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ form.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ form.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

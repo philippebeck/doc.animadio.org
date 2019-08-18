@@ -11,4 +11,32 @@
             <li>the Cursor classes</li>
         </ol>
     </section>
+
+    <table class="table">
+        <caption>Helpers</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th>Variable</th>
+            <th>Media</th>
+            <th>Concat</th>
+            <th>State</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for helpers in allHelpersClasses %}
+            <tr>
+                <th>{{ helpers.class }}</th>
+                <td>{{ helpers.property }}</td>
+                <td>{{ helpers.variable }}</td>
+                <td>{{ helpers.media|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ helpers.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ helpers.state|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

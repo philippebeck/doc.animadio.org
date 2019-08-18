@@ -67,7 +67,7 @@ class GridController extends Controller
         return $this->render('grid.twig', [
             'allFluidClasses'   => $this->allFluidClasses,
             'allFlexClasses'    => $this->allFlexClasses,
-            'allPlaceClasses'   => $this->allPlaceClasses,
+            'allPlaceClasses'   => $this->allPlaceClasses
         ]);
     }
 }

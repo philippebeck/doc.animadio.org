@@ -18,11 +18,6 @@ class ElementsController extends Controller
     /**
      * @var array
      */
-    private $allElementsClasses = array();
-
-    /**
-     * @var array
-     */
     private $allBtnClasses = array();
 
     /**
@@ -72,9 +67,9 @@ class ElementsController extends Controller
     public function __construct(Environment $twig)
     {
         parent::__construct($twig);
-        $this->allElementsClasses = ModelFactory::getModel('Class')->listClasses(3);
+        $allElementsClasses = ModelFactory::getModel('Class')->listClasses(3);
 
-        foreach ($this->allElementsClasses as $elementsClass) {
+        foreach ($allElementsClasses as $elementsClass) {
             switch ($elementsClass['source']) {
                 case 'btn': $this->allBtnClasses[] = $elementsClass;
                     break;

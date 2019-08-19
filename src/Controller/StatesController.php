@@ -18,11 +18,6 @@ class StatesController extends Controller
     /**
      * @var array
      */
-    private $allStatesClasses = array();
-
-    /**
-     * @var array
-     */
     private $allAnimaClasses = array();
 
     /**
@@ -72,9 +67,9 @@ class StatesController extends Controller
     public function __construct(Environment $twig)
     {
         parent::__construct($twig);
-        $this->allStatesClasses = ModelFactory::getModel('Class')->listClasses(4);
+        $allStatesClasses = ModelFactory::getModel('Class')->listClasses(4);
 
-        foreach ($this->allStatesClasses as $statesClass) {
+        foreach ($allStatesClasses as $statesClass) {
             switch ($statesClass['source']) {
                 case 'anima': $this->allAnimaClasses[] = $statesClass;
                     break;

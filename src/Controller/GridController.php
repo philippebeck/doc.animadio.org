@@ -18,11 +18,6 @@ class GridController extends Controller
     /**
      * @var array
      */
-    private $allGridClasses = array();
-
-    /**
-     * @var array
-     */
     private $allFluidClasses = array();
 
     /**
@@ -42,9 +37,9 @@ class GridController extends Controller
         public function __construct(Environment $twig)
     {
         parent::__construct($twig);
-        $this->allGridClasses = ModelFactory::getModel('Class')->listClasses(2);
+        $allGridClasses = ModelFactory::getModel('Class')->listClasses(2);
 
-        foreach ($this->allGridClasses as $gridClass) {
+        foreach ($allGridClasses as $gridClass) {
             switch ($gridClass['source']) {
                 case 'fluid': $this->allFluidClasses[] = $gridClass;
                     break;

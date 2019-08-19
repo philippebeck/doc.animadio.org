@@ -18,11 +18,6 @@ class GlobalController extends Controller
     /**
      * @var array
      */
-    private $allGlobalClasses = array();
-
-    /**
-     * @var array
-     */
     private $allBoxClasses = array();
 
     /**
@@ -37,9 +32,9 @@ class GlobalController extends Controller
     public function __construct(Environment $twig)
     {
         parent::__construct($twig);
-        $this->allGlobalClasses = ModelFactory::getModel('Class')->listClasses(1);
+        $allGlobalClasses = ModelFactory::getModel('Class')->listClasses(1);
 
-        foreach ($this->allGlobalClasses as $globalClass) {
+        foreach ($allGlobalClasses as $globalClass) {
             switch ($globalClass['source']) {
                 case 'box': $this->allBoxClasses[] = $globalClass;
                     break;

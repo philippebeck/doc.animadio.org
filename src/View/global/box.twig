@@ -37,7 +37,7 @@
         <tr>
             <th>Class</th>
             <th>Property</th>
-            <th><a href="{{ url('global') }}" title="How to use Variables ?">Variable</a></th>
+            <th><a href="{{ url('global') }}" title="How to use Variables ?">Value</a></th>
             <th>@media</th>
             <th><a href="{{ url('grid') }}" title="How to Concat ?">Concat</a></th>
             <th><a href="{{ url('states') }}" title="How States work ?">States</a></th>
@@ -49,7 +49,7 @@
             <tr>
                 <th>{{ box.class }}</th>
                 <td>{{ box.property }}</td>
-                <td>{{ box.variable }}</td>
+                <td>{{ box.valor }}</td>
                 <td>{{ box.screen }}</td>
                 <td>{{ box.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ box.state|replace({'1': "yes", '0': "no"}) }}</td>

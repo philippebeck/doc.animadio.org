@@ -71,7 +71,7 @@
         <tr>
             <th>Class</th>
             <th>Property</th>
-            <th><a href="{{ url('global') }}" title="How to use Variables ?">Variable</a></th>
+            <th><a href="{{ url('global') }}" title="How to use Variables ?">Value</a></th>
             <th>@media</th>
             <th><a href="{{ url('grid') }}" title="How to Concat ?">Concat</a></th>
             <th><a href="{{ url('states') }}" title="How States work ?">States</a></th>
@@ -83,7 +83,7 @@
             <tr>
                 <th>{{ card.class }}</th>
                 <td>{{ card.property }}</td>
-                <td>{{ card.variable }}</td>
+                <td>{{ card.valor }}</td>
                 <td>{{ card.screen }}</td>
                 <td>{{ card.concat|replace({'1': "yes", '0': "no"}) }}</td>
                 <td>{{ card.state|replace({'1': "yes", '0': "no"}) }}</td>

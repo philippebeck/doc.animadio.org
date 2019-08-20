@@ -49,7 +49,6 @@ CREATE TABLE Class
     valor_id        SMALLINT            UNSIGNED        NOT NULL,
     media_id        TINYINT             UNSIGNED        NOT NULL,
     concat          BOOLEAN             NOT NULL,
-    state           BOOLEAN             NOT NULL,
     CONSTRAINT      fk_part_id          FOREIGN KEY     (part_id)       REFERENCES  Part(id),
     CONSTRAINT      fk_source_id        FOREIGN KEY     (source_id)     REFERENCES  Source(id),
     CONSTRAINT      fk_property_id      FOREIGN KEY     (property_id)   REFERENCES  Property(id),

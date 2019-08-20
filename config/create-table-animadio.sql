@@ -24,10 +24,10 @@ CREATE TABLE Property
 )
     ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
-CREATE TABLE Variable
+CREATE TABLE Valor
 (
     id          SMALLINT        UNSIGNED    PRIMARY KEY     AUTO_INCREMENT,
-    variable    VARCHAR(50)     NOT NULL    UNIQUE
+    valor       VARCHAR(50)     NOT NULL    UNIQUE
 )
     ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
@@ -46,14 +46,14 @@ CREATE TABLE Class
     part_id         TINYINT             UNSIGNED        NOT NULL,
     source_id       TINYINT             UNSIGNED        NOT NULL,
     property_id     TINYINT             UNSIGNED        NOT NULL,
-    variable_id     SMALLINT            UNSIGNED        NOT NULL,
+    valor_id        SMALLINT            UNSIGNED        NOT NULL,
     media_id        TINYINT             UNSIGNED        NOT NULL,
     concat          BOOLEAN             NOT NULL,
     state           BOOLEAN             NOT NULL,
     CONSTRAINT      fk_part_id          FOREIGN KEY     (part_id)       REFERENCES  Part(id),
     CONSTRAINT      fk_source_id        FOREIGN KEY     (source_id)     REFERENCES  Source(id),
     CONSTRAINT      fk_property_id      FOREIGN KEY     (property_id)   REFERENCES  Property(id),
-    CONSTRAINT      fk_variable_id      FOREIGN KEY     (variable_id)   REFERENCES  Variable(id),
+    CONSTRAINT      fk_valor_id         FOREIGN KEY     (valor_id)      REFERENCES  Valor(id),
     CONSTRAINT      fk_media_id         FOREIGN KEY     (media_id)      REFERENCES  Media(id)
 )
     ENGINE=INNODB DEFAULT CHARSET=UTF8;

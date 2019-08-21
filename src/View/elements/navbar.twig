@@ -15,30 +15,4 @@
         <i class="fab fa-github fa-lg" aria-hidden="true"></i>
         Navbar CSS
     </a>
-
-    <table class="table">
-        <caption>Navbar Datas</caption>
-
-        <thead>
-        <tr>
-            <th>Class</th>
-            <th>Property</th>
-            <th>Value</th>
-            <th>Screen</th>
-            <th>Concat</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        {% for navbar in allNavbarClasses %}
-            <tr>
-                <th>{{ navbar.class }}</th>
-                <td>{{ navbar.property }}</td>
-                <td>{{ navbar.valor }}</td>
-                <td>{{ navbar.screen }}</td>
-                <td>{{ navbar.concat|replace({'1': "yes", '0': "no"}) }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 </article>

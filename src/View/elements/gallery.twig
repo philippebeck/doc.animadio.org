@@ -1,29 +1,4 @@
 <article class="menu-target5">
     <h3>Gallery</h3>
 
-    <table class="table">
-        <caption>Gallery Datas</caption>
-
-        <thead>
-        <tr>
-            <th>Class</th>
-            <th>Property</th>
-            <th>Value</th>
-            <th>Screen</th>
-            <th>Concat</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        {% for gallery in allGalleryClasses %}
-            <tr>
-                <th>{{ gallery.class }}</th>
-                <td>{{ gallery.property }}</td>
-                <td>{{ gallery.valor }}</td>
-                <td>{{ gallery.screen }}</td>
-                <td>{{ gallery.concat|replace({'1': "yes", '0': "no"}) }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 </article>

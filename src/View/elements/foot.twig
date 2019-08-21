@@ -1,29 +1,4 @@
 <article class="menu-target3">
     <h3>Foot</h3>
 
-    <table class="table">
-        <caption>Foot Datas</caption>
-
-        <thead>
-        <tr>
-            <th>Class</th>
-            <th>Property</th>
-            <th>Value</th>
-            <th>Screen</th>
-            <th>Concat</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        {% for foot in allFootClasses %}
-            <tr>
-                <th>{{ foot.class }}</th>
-                <td>{{ foot.property }}</td>
-                <td>{{ foot.valor }}</td>
-                <td>{{ foot.screen }}</td>
-                <td>{{ foot.concat|replace({'1': "yes", '0': "no"}) }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 </article>

@@ -74,30 +74,4 @@
         <!-- Timeline -->
         <div></div>
     </header>
-
-    <table class="table">
-        <caption>Slider Datas</caption>
-
-        <thead>
-        <tr>
-            <th>Class</th>
-            <th>Property</th>
-            <th>Value</th>
-            <th>Screen</th>
-            <th>Concat</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        {% for slider in allSliderClasses %}
-            <tr>
-                <th>{{ slider.class }}</th>
-                <td>{{ slider.property }}</td>
-                <td>{{ slider.valor }}</td>
-                <td>{{ slider.screen }}</td>
-                <td>{{ slider.concat|replace({'1': "yes", '0': "no"}) }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 </article>

@@ -99,30 +99,4 @@
         </tr>
         </tbody>
     </table>
-
-    <table class="table">
-        <caption>Table Datas</caption>
-
-        <thead>
-        <tr>
-            <th>Class</th>
-            <th>Property</th>
-            <th>Value</th>
-            <th>Screen</th>
-            <th>Concat</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        {% for table in allTableClasses %}
-            <tr>
-                <th>{{ table.class }}</th>
-                <td>{{ table.property }}</td>
-                <td>{{ table.valor }}</td>
-                <td>{{ table.screen }}</td>
-                <td>{{ table.concat|replace({'1': "yes", '0': "no"}) }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 </article>

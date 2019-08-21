@@ -131,30 +131,4 @@
             </figcaption>
         </figure>
     </figure>
-
-    <table class="table">
-        <caption>Menu Datas</caption>
-
-        <thead>
-        <tr>
-            <th>Class</th>
-            <th>Property</th>
-            <th>Value</th>
-            <th>Screen</th>
-            <th>Concat</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        {% for menu in allMenuClasses %}
-            <tr>
-                <th>{{ menu.class }}</th>
-                <td>{{ menu.property }}</td>
-                <td>{{ menu.valor }}</td>
-                <td>{{ menu.screen }}</td>
-                <td>{{ menu.concat|replace({'1': "yes", '0': "no"}) }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 </article>

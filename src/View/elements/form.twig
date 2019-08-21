@@ -59,30 +59,4 @@
             </ul>
         </fieldset>
     </form>
-
-    <table class="table">
-        <caption>Form Datas</caption>
-
-        <thead>
-        <tr>
-            <th>Class</th>
-            <th>Property</th>
-            <th>Value</th>
-            <th>Screen</th>
-            <th>Concat</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        {% for form in allFormClasses %}
-            <tr>
-                <th>{{ form.class }}</th>
-                <td>{{ form.property }}</td>
-                <td>{{ form.valor }}</td>
-                <td>{{ form.screen }}</td>
-                <td>{{ form.concat|replace({'1': "yes", '0': "no"}) }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 </article>

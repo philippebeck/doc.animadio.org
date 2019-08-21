@@ -1,92 +1,14 @@
 <article class="menu-target2">
     <h3>Card</h3>
 
-    <section class="card">
+    {% for card in allCardClasses %}
+    <section class="{{ card.class }}">
         <figure>
             <img src="img/logo.png" alt="Animadio Logo">
         </figure>
-        <h4>Card</h4>
+        <h4>{{ card.class }}</h4>
         <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
-        <a class="btn" href="#">View More</a>
+        <a class="{{ card.class|replace({ 'card': "btn" }) }}" href="#">View More</a>
     </section>
-
-    <section class="card-black">
-        <figure>
-            <img src="img/logo.png" alt="Animadio Logo">
-        </figure>
-        <h4>Card Black</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
-        <a class="btn-white" href="#">View More</a>
-    </section>
-
-    <section class="card-blue">
-        <figure>
-            <img src="img/logo.png" alt="Animadio Logo">
-        </figure>
-        <h4>Card Blue</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
-        <a class="btn-sky" href="#">View More</a>
-    </section>
-
-    <section class="card-green">
-        <figure>
-            <img src="img/logo.png" alt="Animadio Logo">
-        </figure>
-        <h4>Card Green</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
-        <a class="btn-jade" href="#">View More</a>
-    </section>
-
-    <section class="card-red">
-        <figure>
-            <img src="img/logo.png" alt="Animadio Logo">
-        </figure>
-        <h4>Card Red</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
-        <a class="btn-tomato" href="#">View More</a>
-    </section>
-
-    <section class="card-purple">
-        <figure>
-            <img src="img/logo.png" alt="Animadio Logo">
-        </figure>
-        <h4>Card Purple</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
-        <a class="btn-violet" href="#">View More</a>
-    </section>
-
-    <section class="card-yellow">
-        <figure>
-            <img src="img/logo.png" alt="Animadio Logo">
-        </figure>
-        <h4>Card Yellow</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
-        <a class="btn-khaki" href="#">View More</a>
-    </section>
-
-    <table class="table">
-        <caption>Card Datas</caption>
-
-        <thead>
-        <tr>
-            <th>Class</th>
-            <th>Property</th>
-            <th>Value</th>
-            <th>Screen</th>
-            <th>Concat</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        {% for card in allCardClasses %}
-            <tr>
-                <th>{{ card.class }}</th>
-                <td>{{ card.property }}</td>
-                <td>{{ card.valor }}</td>
-                <td>{{ card.screen }}</td>
-                <td>{{ card.concat|replace({'1': "yes", '0': "no"}) }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    {% endfor %}
 </article>

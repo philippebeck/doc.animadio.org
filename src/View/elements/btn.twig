@@ -1,21 +1,18 @@
 <article class="menu-target1">
     <h3>Btn | Button</h3>
-    <ul>
-        {% for btn in allBtnClasses %}
-            <li>
-                {% if btn.class|split('-')|first is same as ('btn') %}
-                    <a class="{{ btn.class }}" href="#" title="Your awesome Link !">
-                        <i class="fas fa-globe" aria-hidden="true"></i>
-                        {{ btn.class }}
-                    </a>
-                {% else %}
-                    <input class="{{ btn.class }}-check" id="{{ btn.class }}-check" type="checkbox" >
-                    <label class="{{ btn.class }}" for="{{ btn.class }}-check" title="Your awesome Effect !">
-                        <i class="fas fa-cogs" aria-hidden="true"></i>
-                        {{ btn.class }}
-                    </label>
-                {% endif %}
-            </li>
-        {%  endfor %}
-    </ul>
+
+    {% for btn in allBtnClasses %}
+        {% if btn.class|split('-')|first is same as ('btn') %}
+            <a class="{{ btn.class }}" href="#" title="Your awesome Link !">
+                <i class="fas fa-globe" aria-hidden="true"></i>
+                {{ btn.class }}
+            </a>
+        {% else %}
+            <input class="{{ btn.class }}-check" id="{{ btn.class }}-check" type="checkbox" >
+            <label class="{{ btn.class }}" for="{{ btn.class }}-check" title="Your awesome Effect !">
+                <i class="fas fa-cogs" aria-hidden="true"></i>
+                {{ btn.class }}
+            </label>
+        {% endif %}
+    {%  endfor %}
 </article>

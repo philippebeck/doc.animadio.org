@@ -2,13 +2,22 @@
     <h3>Card</h3>
 
     {% for card in allCardClasses %}
-    <section class="{{ card.class }}">
-        <figure>
-            <img src="img/logo.png" alt="Animadio Logo">
-        </figure>
-        <h4>{{ card.class }}</h4>
-        <p>This is some text... This is some text... This is some text... This is some text... This is some text...</p>
-        <a class="{{ card.class|replace({ 'card': "btn" }) }}" href="#">View More</a>
-    </section>
+        <section class="{{ card.class }}">
+            <figure>
+                <img src="img/logo.png" alt="Animadio Logo">
+            </figure>
+            <h4>{{ card.class }}</h4>
+            <p>The only class to write inside HTML is "{{ card.class }}" for this card & you can add as many btn or button you want ! </p>
+            <a class="{{ card.class|replace({ 'card': "btn" }) }}" href="#" title="Your awesome link !">
+                <i class="fas fa-globe" aria-hidden="true"></i>
+                {{ card.class|replace({ 'card': "btn" }) }}
+            </a>
+            <input class="{{ card.class|replace({ 'card': "button" }) }}-check" id="{{ card.class|replace({ 'card': "button" }) }}-check" type="checkbox" >
+            <label class="{{ card.class|replace({ 'card': "button" }) }}" for="{{ card.class|replace({ 'card': "button" }) }}-check" title="Your awesome effect !">
+                <i class="fas fa-cogs" aria-hidden="true"></i>
+                {{ card.class|replace({ 'card': "button" }) }}
+            </label>
+        </section>
     {% endfor %}
+
 </article>

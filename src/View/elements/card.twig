@@ -1,23 +1,32 @@
 <article class="menu-target2">
     <h3>Card</h3>
 
-    {% for card in allCardClasses %}
-        <section class="{{ card.class }}">
-            <figure>
-                <img src="img/logo.png" alt="Animadio Logo">
-            </figure>
-            <h4>{{ card.class }}</h4>
-            <p>The only class to write inside HTML is "{{ card.class }}" for this card & you can add as many btn or button you want ! </p>
-            <a class="{{ card.class|replace({ 'card': "btn" }) }}" href="#" title="Your awesome link !">
-                <i class="fas fa-globe" aria-hidden="true"></i>
-                {{ card.class|replace({ 'card': "btn" }) }}
-            </a>
-            <input class="{{ card.class|replace({ 'card': "button" }) }}-check" id="{{ card.class|replace({ 'card': "button" }) }}-check" type="checkbox" >
-            <label class="{{ card.class|replace({ 'card': "button" }) }}" for="{{ card.class|replace({ 'card': "button" }) }}-check" title="Your awesome effect !">
-                <i class="fas fa-cogs" aria-hidden="true"></i>
-                {{ card.class|replace({ 'card': "button" }) }}
-            </label>
-        </section>
-    {% endfor %}
+    <section class="card">
+        <h4>Card Infos</h4>
+        <p>You can use Card classes with differents colors !</p>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/elements/card.css">View Card Source Code</a>
+    </section>
 
+    <section>
+        <h4>Card Examples</h4>
+
+        {% for card in allCardClasses %}
+            <section class="{{ card.class }}">
+                <figure>
+                    <img src="img/logo.png" alt="Animadio Logo">
+                </figure>
+                <h5>{{ card.class }}</h5>
+                <p>The only class to write inside HTML is "{{ card.class }}" for this card & you can add as many btn or button you want ! </p>
+                <a class="{{ card.class|replace({ 'card': "btn" }) }}" href="#" title="Your awesome link !">
+                    <i class="fas fa-globe" aria-hidden="true"></i>
+                    {{ card.class|replace({ 'card': "btn" }) }}
+                </a>
+                <input class="{{ card.class|replace({ 'card': "button" }) }}-check" id="{{ card.class|replace({ 'card': "button" }) }}-check" type="checkbox" >
+                <label class="{{ card.class|replace({ 'card': "button" }) }}" for="{{ card.class|replace({ 'card': "button" }) }}-check" title="Your awesome effect !">
+                    <i class="fas fa-cogs" aria-hidden="true"></i>
+                    {{ card.class|replace({ 'card': "button" }) }}
+                </label>
+            </section>
+        {% endfor %}
+    </section>
 </article>

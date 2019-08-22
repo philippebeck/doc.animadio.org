@@ -1,18 +1,27 @@
 <article class="menu-target1">
     <h3>Btn | Button</h3>
 
-    {% for btn in allBtnClasses %}
-        {% if btn.class|split('-')|first is same as ('btn') %}
-            <a class="{{ btn.class }}" href="#" title="Your awesome Link !">
-                <i class="fas fa-globe" aria-hidden="true"></i>
-                {{ btn.class }}
-            </a>
-        {% else %}
-            <input class="{{ btn.class }}-check" id="{{ btn.class }}-check" type="checkbox" >
-            <label class="{{ btn.class }}" for="{{ btn.class }}-check" title="Your awesome Effect !">
-                <i class="fas fa-cogs" aria-hidden="true"></i>
-                {{ btn.class }}
-            </label>
-        {% endif %}
-    {%  endfor %}
+    <section class="card">
+        <h4>Btn Infos</h4>
+        <p>You can use Btn classes for links & Button classes for effects !</p>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/elements/btn.css">View Btn Source Code</a>
+    </section>
+
+    <section>
+        <h4>Btn Examples</h4>
+        {% for btn in allBtnClasses %}
+            {% if btn.class|split('-')|first is same as ('btn') %}
+                <a class="{{ btn.class }}" href="#" title="Your awesome Link !">
+                    <i class="fas fa-globe" aria-hidden="true"></i>
+                    {{ btn.class }}
+                </a>
+            {% else %}
+                <input class="{{ btn.class }}-check" id="{{ btn.class }}-check" type="checkbox" >
+                <label class="{{ btn.class }}" for="{{ btn.class }}-check" title="Your awesome Effect !">
+                    <i class="fas fa-cogs" aria-hidden="true"></i>
+                    {{ btn.class }}
+                </label>
+            {% endif %}
+        {%  endfor %}
+    </section>
 </article>

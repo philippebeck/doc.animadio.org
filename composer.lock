@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2c479e46d43647ee48616a09a1ca2ad",
+    "content-hash": "2ab866d201291f8070f5372931e8c7b2",
     "packages": [
         {
             "name": "pjs/pam",

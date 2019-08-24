@@ -811,7 +811,8 @@ VALUES
 ('wrap-reverse'),
 ('--btn-circle-padding-top'),
 ('--btn-round-padding-top'),
-('--btn-square-padding-top');
+('--btn-square-padding-top'),
+('oblique');
 
 INSERT INTO Media
 (media,     screen)
@@ -899,9 +900,10 @@ VALUES
 ('min-w-sm',            '1',        '4',            '46',           '415',          '1',        '0'),
 ('min-w-md',            '1',        '4',            '46',           '414',          '1',        '0'),
 ('min-w-lg',            '1',        '4',            '46',           '413',          '1',        '0'),
-('font-normal',         '1',        '5',            '1',            '643',          '1',        '0'),
-('font-italic',         '1',        '5',            '30',           '638',          '1',        '0'),
 ('font-bold',           '1',        '5',            '31',           '617',          '1',        '0'),
+('font-italic',         '1',        '5',            '30',           '638',          '1',        '0'),
+('font-normal',         '1',        '5',            '1',            '643',          '1',        '0'),
+('font-oblique',        '1',        '5',            '30',           '693',          '1',        '0'),
 ('text-center',         '1',        '5',            '62',           '618',          '1',        '0'),
 ('text-justify',        '1',        '5',            '62',           '639',          '1',        '0'),
 ('text-left',           '1',        '5',            '62',           '640',          '1',        '0'),

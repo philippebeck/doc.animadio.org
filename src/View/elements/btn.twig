@@ -12,12 +12,15 @@
 
         {% for btn in allBtnClasses %}
             {% if btn.class|split('-')|first is same as ('btn') %}
+
+                <h5 class="deco-base">{{ btn.class }} & {{ btn.class|replace({'btn': "button"}) }}</h5>
+
                 <a class="{{ btn.class }}" href="#" title="Your awesome link !">
                     <i class="fas fa-globe" aria-hidden="true"></i>
                     {{ btn.class }}
                 </a>
 
-                <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">a</span><span class="color-salmon-base font-italic"> class=</span><span class="color-jade-base">"{{ btn.class }}"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"#"</span><span class="color-salmon-base font-italic"> title=</span><span class="color-jade-base">"Your awesome link !"</span><span class="color-silver-base">&gt;</span><span class="color-silver-base">&lt;/</span><span class="color-red-base">a</span><span class="color-silver-base">&gt;</span></pre>
+                <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-red-base">a</span><span class="color-salmon-base font-italic"> class=</span><span class="color-jade-base">"{{ btn.class }}"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"#"</span><span class="color-salmon-base font-italic"> title=</span><span class="color-jade-base">"Your awesome link !"</span><span class="color-silver-base">&gt;</span><span class="color-silver-base">&lt;/</span><span class="color-red-base">a</span><span class="color-silver-base">&gt;</span></pre>
 
             {% else %}
                 <input class="{{ btn.class }}-check" id="{{ btn.class }}-check" type="checkbox" >

@@ -12,6 +12,9 @@
 
         {% for btn in allBtnClasses %}
             {% if btn.class|split('-')|first is same as ('btn') %}
+
+                <h5 class="deco-base">{{ btn.class }} & {{ btn.class|replace({'btn': "button"}) }}</h5>
+
                 <a class="{{ btn.class }}" href="#" title="Your awesome link !">
                     <i class="fas fa-globe" aria-hidden="true"></i>
                     {{ btn.class }}

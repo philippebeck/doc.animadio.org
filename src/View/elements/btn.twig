@@ -9,18 +9,25 @@
 
     <section>
         <h4>Btn Examples</h4>
+
         {% for btn in allBtnClasses %}
             {% if btn.class|split('-')|first is same as ('btn') %}
-                <a class="{{ btn.class }}" href="#" title="Your awesome Link !">
+                <a class="{{ btn.class }}" href="#" title="Your awesome link !">
                     <i class="fas fa-globe" aria-hidden="true"></i>
                     {{ btn.class }}
                 </a>
+
+                <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">a</span><span class="color-salmon-base font-italic"> class=</span><span class="color-jade-base">"{{ btn.class }}"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"#"</span><span class="color-salmon-base font-italic"> title=</span><span class="color-jade-base">"Your awesome link !"</span><span class="color-silver-base">&gt;</span><span class="color-silver-base">&lt;/</span><span class="color-red-base">a</span><span class="color-silver-base">&gt;</span></pre>
+
             {% else %}
                 <input class="{{ btn.class }}-check" id="{{ btn.class }}-check" type="checkbox" >
-                <label class="{{ btn.class }}" for="{{ btn.class }}-check" title="Your awesome Effect !">
+                <label class="{{ btn.class }}" for="{{ btn.class }}-check" title="Your awesome effect !">
                     <i class="fas fa-cogs" aria-hidden="true"></i>
                     {{ btn.class }}
                 </label>
+
+                <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-red-base">input</span><span class="color-salmon-base font-italic"> class=</span><span class="color-jade-base">"{{ btn.class }}-check"</span><span class="color-salmon-base font-italic"> id=</span><span class="color-jade-base">"{{ btn.class }}-check"</span><span class="color-salmon-base font-italic"> type=</span><span class="color-jade-base">"checkbox"</span><span class="color-silver-base">&gt;</span></pre>
+                <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-red-base">label</span><span class="color-salmon-base font-italic"> class=</span><span class="color-jade-base">"{{ btn.class }}"</span><span class="color-salmon-base font-italic"> for=</span><span class="color-jade-base">"{{ btn.class }}-check"</span><span class="color-salmon-base font-italic"> title=</span><span class="color-jade-base">"Your awesome effect !"</span><span class="color-silver-base">&gt;</span><span class="color-silver-base">&lt;/</span><span class="color-red-base">label</span><span class="color-silver-base">&gt;</span></pre>
             {% endif %}
         {%  endfor %}
     </section>

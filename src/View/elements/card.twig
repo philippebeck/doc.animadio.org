@@ -26,8 +26,8 @@
                     <i class="fas fa-globe" aria-hidden="true"></i>
                     {{ card.class|replace({ 'card': "btn" }) }}
                 </a>
-                <input class="{{ card.class|replace({ 'card': "button" }) }}-check" id="{{ card.class|replace({ 'card': "button" }) }}-check" type="checkbox" >
-                <label class="{{ card.class|replace({ 'card': "button" }) }}" for="{{ card.class|replace({ 'card': "button" }) }}-check" title="Your awesome effect !">
+                <input class="{{ card.class|replace({ 'card': "button" }) }}-check" id="card-{{ card.class|replace({ 'card': "button" }) }}-check" type="checkbox" >
+                <label class="{{ card.class|replace({ 'card': "button" }) }}" for="card-{{ card.class|replace({ 'card': "button" }) }}-check" title="Your awesome effect !">
                     <i class="fas fa-cogs" aria-hidden="true"></i>
                     {{ card.class|replace({ 'card': "button" }) }}
                 </label>

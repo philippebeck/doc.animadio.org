@@ -16,7 +16,7 @@ VALUES
 ('init'),
 ('box'),
 ('helpers'),
-('fluid'),
+('grid'),
 ('flex'),
 ('place'),
 ('btn'),

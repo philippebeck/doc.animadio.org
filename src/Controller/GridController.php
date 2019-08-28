@@ -18,7 +18,7 @@ class GridController extends Controller
     /**
      * @var array
      */
-    private $allFluidClasses = array();
+    private $allGridClasses = array();
 
     /**
      * @var array
@@ -41,7 +41,7 @@ class GridController extends Controller
 
         foreach ($allGridClasses as $gridClass) {
             switch ($gridClass['source']) {
-                case 'fluid': $this->allFluidClasses[] = $gridClass;
+                case 'grid': $this->allGridClasses[] = $gridClass;
                     break;
                 case 'flex': $this->allFlexClasses[] = $gridClass;
                     break;
@@ -60,7 +60,7 @@ class GridController extends Controller
         public function IndexAction()
     {
         return $this->render('grid.twig', [
-            'allFluidClasses'   => $this->allFluidClasses,
+            'allGridClasses'    => $this->allGridClasses,
             'allFlexClasses'    => $this->allFlexClasses,
             'allPlaceClasses'   => $this->allPlaceClasses
         ]);

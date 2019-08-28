@@ -9,13 +9,13 @@
 <article>
     <h2>Grid</h2>
 
-    <section class="card-red">
+    <section class="card">
         <figure>
             <img src="img/logo.png" alt="Animadio Logo">
         </figure>
         <h3>Grid Usage</h3>
         <p>To use the Grid feature, you can concatenate each Screen with the desired number of columns after the same Grid keyword.</p>
-        <a class="btn-red" href="https://cdn.jsdelivr.net/npm/animadio@0.8.2/dist/animadio-grid.css" title="Access to Animadio Grid CDN" rel="noreferrer noopener" target="_blank">Grid CDN</a>
+        <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@0.8.2/dist/animadio-grid.css" title="Access to Animadio Grid CDN" rel="noreferrer noopener" target="_blank">Grid CDN</a>
     </section>
 
     <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
@@ -24,7 +24,7 @@
 
     <nav class="menu">
         <label for="menu-radio1" title="Show Grid & Fluid Classes">
-            Grid | Fluid
+            Grid
             <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
         </label>
         <label for="menu-radio2" title="Show Flex Classes">
@@ -40,7 +40,7 @@
     <section class="menu-relay">
         <h3>Grid Parts</h3>
 
-        {{ include("grid/fluid.twig") }}
+        {{ include("grid/grid.twig") }}
         {{ include("grid/flex.twig") }}
         {{ include("grid/place.twig") }}
 

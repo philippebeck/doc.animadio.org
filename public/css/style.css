@@ -29,6 +29,8 @@ table {
 code,
 pre {
   --code-font-family: 'Share Tech Mono', monospace;
+  margin: auto;
+  text-align: initial;
 }
 
 [class*="nav"] {
@@ -42,4 +44,22 @@ pre {
   --keyframes-content4: url(https://animadio.org/img/data/numbers/4.png);
   --keyframes-content5: url(https://animadio.org/img/data/numbers/5.png);
   --slider-check-play-animation: 20s linear;
+}
+
+@media (min-width: 768px) {
+  pre {
+    width: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  pre {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  pre {
+    width: 70%;
+  }
 }

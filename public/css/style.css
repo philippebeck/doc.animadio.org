@@ -29,6 +29,8 @@ table {
 code,
 pre {
   --code-font-family: 'Share Tech Mono', monospace;
+
+  text-align: initial;
 }
 
 [class*="nav"] {

@@ -1,6 +1,6 @@
 {
   "name": "animadio/doc.animadio.org",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Animadio Official Documentation - Grid & Flexbox Layouts - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons - No JavaScript needed or used",
   "type": "library",
   "keywords": [
@@ -36,10 +36,10 @@
   },
   "require": {
     "php": "7.2",
-    "pjs/pam": "1.0.0"
+    "pjs/pam": "^1.0.0"
   },
   "require-dev": {
-    "tracy/tracy": "2.x"
+    "tracy/tracy": "^2.6.4"
   },
   "config": {
     "platform": {

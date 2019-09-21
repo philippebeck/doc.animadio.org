@@ -1,8 +1,8 @@
 <article class="menu-target2">
-    <h3>Card</h3>
+    <h4>Card</h4>
 
     <section class="card-green">
-        <h4>Card Infos</h4>
+        <h5>Card Infos</h5>
         <p>You can use Card classes with differents colors !</p>
         <a class="btn-green" href="https://codepen.io/animadio/pen/KKPmGvE" title="View HTML Example @CodePen" rel="noreferrer noopener" target="_blank">
             <i class="fab fa-html5 fa-lg" aria-hidden="true"></i>
@@ -13,14 +13,14 @@
     </section>
 
     <section>
-        <h4>Card Examples</h4>
+        <h5>Card Examples</h5>
 
         {% for card in allCardClasses %}
             <section class="{{ card.class }}">
                 <figure>
                     <img src="img/logo.png" alt="Animadio Logo">
                 </figure>
-                <h5>{{ card.class }}</h5>
+                <h6>{{ card.class }}</h6>
                 <p>The only class to write inside HTML is "{{ card.class }}" for this card & you can add as many btn or button you want ! </p>
                 <a class="{{ card.class|replace({ 'card': "btn" }) }}" href="#" title="Your awesome link !">
                     <i class="fas fa-globe" aria-hidden="true"></i>
@@ -38,7 +38,7 @@
     <span class="color-silver">&lt;</span><span class="color-red">figure</span><span class="color-silver">&gt;</span>
         <span class="color-silver">&lt;</span><span class="color-red">img</span><span class="color-salmon font-italic"> src=</span>"#"<span class="color-salmon font-italic"> alt=</span>"#"<span class="color-silver">&gt;</span>
     <span class="color-silver">&lt;/</span><span class="color-red">figure</span><span class="color-silver">&gt;</span>
-    <span class="color-silver">&lt;</span><span class="color-red">h4</span><span class="color-silver">&gt;</span><span class="color-white">{{ card.class|replace({'-': " "})|title }} Title</span><span class="color-silver">&lt;/</span><span class="color-red">h4</span><span class="color-silver">&gt;</span>
+    <span class="color-silver">&lt;</span><span class="color-red">h5</span><span class="color-silver">&gt;</span><span class="color-white">{{ card.class|replace({'-': " "})|title }} Title</span><span class="color-silver">&lt;/</span><span class="color-red">h5</span><span class="color-silver">&gt;</span>
     <span class="color-silver">&lt;</span><span class="color-red">p</span><span class="color-silver">&gt;</span><span class="color-white">{{ card.class|replace({'-': " "})|title }} Message</span><span class="color-silver">&lt;/</span><span class="color-red">p</span><span class="color-silver">&gt;</span>
     <span class="color-silver">&lt;</span><span class="color-red">a</span><span class="color-salmon font-italic"> class=</span>"{{ card.class|replace({ 'card': "btn" }) }}"<span class="color-salmon font-italic"> href=</span>"#"<span class="color-silver">&gt;</span><span class="color-white">{{ card.class|replace({'-': " "})|title }} Btn</span><span class="color-silver">&lt;/</span><span class="color-red">a</span><span class="color-silver">&gt;</span>
     <span class="color-silver">&lt;</span><span class="color-red">input</span><span class="color-salmon font-italic"> class=</span>"button-check"<span class="color-salmon font-italic"> id=</span>"{{ card.class }}-check"<span class="color-salmon font-italic"> type=</span>"checkbox"<span class="color-silver">&gt;</span>

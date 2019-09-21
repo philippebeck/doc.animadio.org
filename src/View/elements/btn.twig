@@ -1,8 +1,8 @@
 <article class="menu-target1">
-    <h3>Btn | Button</h3>
+    <h4>Btn | Button</h4>
 
     <section class="card-green">
-        <h4>Btn Infos</h4>
+        <h5>Btn Infos</h5>
         <p>You can use Btn classes for links & Button classes for effects !</p>
         <a class="btn-green" href="https://codepen.io/animadio/pen/LamGvj" title="View HTML Example @CodePen" rel="noreferrer noopener" target="_blank">
             <i class="fab fa-html5 fa-lg" aria-hidden="true"></i>
@@ -13,12 +13,12 @@
     </section>
 
     <section>
-        <h4>Btn Examples</h4>
+        <h5>Btn Examples</h5>
 
         {% for btn in allBtnClasses %}
             {% if btn.class|split('-')|first is same as ('btn') %}
 
-                <h5 class="deco-under">{{ btn.class|replace({'-': " "}) }} & {{ btn.class|replace({'btn': "button", '-': " "}) }}</h5>
+                <h6 class="deco-under">{{ btn.class|replace({'-': " "}) }} & {{ btn.class|replace({'btn': "button", '-': " "}) }}</h6>
 
                 <a class="{{ btn.class }}" href="#" title="Your awesome link !">
                     <i class="fas fa-globe" aria-hidden="true"></i>

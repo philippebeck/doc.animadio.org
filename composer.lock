@@ -4,10 +4,10 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8278289ea55ceb570989343091e484b3",
+    "content-hash": "c41bfc045f0e9070268c8770215bc33d",
     "packages": [
         {
-            "name": "pjs/pam",
+            "name": "philippebeck/pam",
             "version": "2.0.0",
             "source": {
                 "type": "git",
@@ -57,7 +57,6 @@
                 "superglobal",
                 "twig extension"
             ],
-            "abandoned": "philippebeck/pam",
             "time": "2019-10-05T18:01:09+00:00"
         },
         {

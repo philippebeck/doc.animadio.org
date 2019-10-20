@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use Pam\Controller\Controller;
-use Pam\Model\ModelFactory;
+use Pam\Controller\MainController;
+use Pam\Model\Factory\ModelFactory;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -13,7 +13,7 @@ use Twig\Error\SyntaxError;
  * Class StatesController
  * @package App\Controller
  */
-class StatesController extends Controller
+class StatesController extends MainController
 {
     /**
      * @var array
@@ -62,11 +62,10 @@ class StatesController extends Controller
 
     /**
      * StatesController constructor.
-     * @param Environment $twig
      */
-    public function __construct(Environment $twig)
+    public function __construct()
     {
-        parent::__construct($twig);
+        parent::__construct();
         $allStatesClasses = ModelFactory::getModel('Class')->listClasses(4);
 
         foreach ($allStatesClasses as $statesClass) {

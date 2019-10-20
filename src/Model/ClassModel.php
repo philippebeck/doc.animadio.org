@@ -2,13 +2,13 @@
 
 namespace App\Model;
 
-use Pam\Model\Model;
+use Pam\Model\MainModel;
 
 /**
  * Class ClassModel
  * @package App\Model
  */
-class ClassModel extends Model
+class ClassModel extends MainModel
 {
     public function listClasses(int $id = null)
     {

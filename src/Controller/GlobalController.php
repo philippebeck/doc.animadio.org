@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use Pam\Controller\Controller;
-use Pam\Model\ModelFactory;
+use Pam\Controller\MainController;
+use Pam\Model\Factory\ModelFactory;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -13,7 +13,7 @@ use Twig\Error\SyntaxError;
  * Class GlobalController
  * @package App\Controller
  */
-class GlobalController extends Controller
+class GlobalController extends MainController
 {
     /**
      * @var array
@@ -27,11 +27,10 @@ class GlobalController extends Controller
 
     /**
      * StatesController constructor.
-     * @param Environment $twig
      */
-    public function __construct(Environment $twig)
+    public function __construct()
     {
-        parent::__construct($twig);
+        parent::__construct();
         $allGlobalClasses = ModelFactory::getModel('Class')->listClasses(1);
 
         foreach ($allGlobalClasses as $globalClass) {

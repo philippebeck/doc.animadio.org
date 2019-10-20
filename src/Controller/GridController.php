@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use Pam\Controller\Controller;
-use Pam\Model\ModelFactory;
+use Pam\Controller\MainController;
+use Pam\Model\Factory\ModelFactory;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -13,7 +13,7 @@ use Twig\Error\SyntaxError;
  * Class GridController
  * @package App\Controller
  */
-class GridController extends Controller
+class GridController extends MainController
 {
     /**
      * @var array
@@ -32,11 +32,10 @@ class GridController extends Controller
 
         /**
          * StatesController constructor.
-         * @param Environment $twig
          */
-        public function __construct(Environment $twig)
+        public function __construct()
     {
-        parent::__construct($twig);
+        parent::__construct();
         $allGridClasses = ModelFactory::getModel('Class')->listClasses(2);
 
         foreach ($allGridClasses as $gridClass) {

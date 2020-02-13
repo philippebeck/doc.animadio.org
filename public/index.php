@@ -10,11 +10,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-$router = new Router();
-
-// Basic tests area
 Debugger::enable();
-// print_r($_SESSION);
-// var_dump($router);
 
+$router = new Router();
 $router->run();

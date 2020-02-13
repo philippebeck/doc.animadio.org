@@ -22,7 +22,7 @@
   "homepage": "https://doc.animadio.org",
   "repository": "github:animadio/doc.animadio.org",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.0",
+    "@fortawesome/fontawesome-free": "^5.12.1",
     "animadio": "^1.1.4"
   },
   "bugs": "https://github.com/animadio/doc.animadio.org/issues",

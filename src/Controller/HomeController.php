@@ -19,7 +19,7 @@ class HomeController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function IndexAction()
+    public function defaultMethod()
   {
     return $this->render('home.twig');
   }

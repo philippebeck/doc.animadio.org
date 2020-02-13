@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use Pam\Controller\MainController;
 use Pam\Model\Factory\ModelFactory;
-use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -56,7 +55,7 @@ class GridController extends MainController
          * @throws RuntimeError
          * @throws SyntaxError
          */
-        public function IndexAction()
+        public function defaultMethod()
     {
         return $this->render('grid.twig', [
             'allGridClasses'    => $this->allGridClasses,

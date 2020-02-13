@@ -1,4 +1,4 @@
 .idea/
-config/db.php
+config/parameters.php
 public/node_modules/
 vendor/

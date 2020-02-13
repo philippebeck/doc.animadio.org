@@ -3,7 +3,6 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/767b5613660d45f8903883a96c581816)](https://www.codacy.com/app/Animadio/doc.animadio.org?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=animadio/doc.animadio.org&amp;utm_campaign=Badge_Grade)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5b50d3da75163a2374ef/maintainability)](https://codeclimate.com/github/animadio/doc.animadio.org/maintainability)
-[![Dependabot](https://badgen.net/dependabot/dependabot/dependabot-core/?icon=dependabot)](https://github.com/animadio/doc.animadio.org/graphs/contributors)
 
 ## Overview
 
@@ -44,7 +43,7 @@ This is the Official Documentation about the CSS Framework Animadio !
 
 Doc.animadio.org has continuous support !
 
-[![Project Maintained](https://img.shields.io/maintenance/yes/2019.svg?label=Maintained)](https://github.com/animadio/doc.animadio.org)
+[![Project Maintained](https://img.shields.io/maintenance/yes/2020.svg?label=Maintained)](https://github.com/animadio/doc.animadio.org)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/animadio/doc.animadio.org.svg?label=Last+Commit)](https://github.com/animadio/doc.animadio.org/commits/master)
 
 ---

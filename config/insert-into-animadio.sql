@@ -4,9 +4,11 @@ INSERT INTO Part
 (part)
 VALUES
 ('global'),
+('box'),
 ('grid'),
 ('elements'),
-('states');
+('states'),
+('helpers');
 
 INSERT INTO Source
 (source)

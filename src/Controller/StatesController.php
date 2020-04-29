@@ -27,17 +27,7 @@ class StatesController extends MainController
     /**
      * @var array
      */
-    private $allBordClasses = array();
-
-    /**
-     * @var array
-     */
     private $allColorClasses = array();
-
-    /**
-     * @var array
-     */
-    private $allDecoClasses = array();
 
     /**
      * @var array
@@ -48,16 +38,6 @@ class StatesController extends MainController
      * @var array
      */
     private $allPositionClasses = array();
-
-    /**
-     * @var array
-     */
-    private $allShaboxClasses = array();
-
-    /**
-     * @var array
-     */
-    private $allShatexClasses = array();
 
     /**
      * StatesController constructor.
@@ -73,19 +53,11 @@ class StatesController extends MainController
                     break;
                 case 'bg': $this->allBgClasses[] = $statesClass;
                     break;
-                case 'bord': $this->allBordClasses[] = $statesClass;
-                    break;
                 case 'color': $this->allColorClasses[] = $statesClass;
-                    break;
-                case 'deco': $this->allDecoClasses[] = $statesClass;
                     break;
                 case 'display': $this->allDisplayClasses[] = $statesClass;
                     break;
                 case 'position': $this->allPositionClasses[] = $statesClass;
-                    break;
-                case 'shabox': $this->allShaboxClasses[] = $statesClass;
-                    break;
-                case 'shatex': $this->allShatexClasses[] = $statesClass;
                     break;
             }
         }
@@ -102,13 +74,9 @@ class StatesController extends MainController
         return $this->render('states.twig', [
             'allAnimaClasses'       => $this->allAnimaClasses,
             'allBgClasses'          => $this->allBgClasses,
-            'allBordClasses'        => $this->allBordClasses,
             'allColorClasses'       => $this->allColorClasses,
-            'allDecoClasses'        => $this->allDecoClasses,
             'allDisplayClasses'     => $this->allDisplayClasses,
-            'allPositionClasses'    => $this->allPositionClasses,
-            'allShaboxClasses'      => $this->allShaboxClasses,
-            'allShatexClasses'      => $this->allShatexClasses
+            'allPositionClasses'    => $this->allPositionClasses
         ]);
     }
 }

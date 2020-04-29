@@ -52,11 +52,6 @@ class ElementsController extends MainController
     /**
      * @var array
      */
-    private $allSliderClasses = array();
-
-    /**
-     * @var array
-     */
     private $allTableClasses = array();
 
     /**
@@ -83,8 +78,6 @@ class ElementsController extends MainController
                     break;
                 case 'navbar': $this->allNavbarClasses[] = $elementsClass;
                     break;
-                case 'slider': $this->allSliderClasses[] = $elementsClass;
-                    break;
                 case 'table': $this->allTableClasses[] = $elementsClass;
                     break;
             }
@@ -107,7 +100,6 @@ class ElementsController extends MainController
             'allGalleryClasses'     => $this->allGalleryClasses,
             'allMenuClasses'        => $this->allMenuClasses,
             'allNavbarClasses'      => $this->allNavbarClasses,
-            'allSliderClasses'      => $this->allSliderClasses,
             'allTableClasses'       => $this->allTableClasses
         ]);
     }

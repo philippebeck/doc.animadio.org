@@ -3,7 +3,7 @@
     <input id="navbar-close" type="radio" name="navbar" checked>
     <input id="navbar-open" type="radio" name="navbar">
 
-    <a class="anima-tranx" href="https://animadio.org" accesskey="a" title="Want to go back to Animadio ?">
+    <a class="anima-slideR" href="https://animadio.org" accesskey="a" title="Want to go back to Animadio ?">
         <img src="https://animadio.org/img/logo-nav.png" alt="Animadio Logo">
     </a>
 
@@ -18,6 +18,12 @@
             <a href="{{ url('global') }}" accesskey="m" title="Access to Global Part !">
                 <i class="fas fa-infinity fa-lg" aria-hidden="true"></i>
                 <span>Global</span>
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('box') }}" accesskey="b" title="Access to Box Part !">
+                <i class="fas fa-box fa-lg" aria-hidden="true"></i>
+                <span>Box</span>
             </a>
         </li>
         <li>
@@ -36,6 +42,12 @@
             <a href="{{ url('states') }}" accesskey="s" title="Access to States Part !">
                 <i class="fas fa-cogs fa-lg" aria-hidden="true"></i>
                 <span>States</span>
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('helpers') }}" accesskey="h" title="Access to Helpers Part !">
+                <i class="fas fa-life-ring fa-lg" aria-hidden="true"></i>
+                <span>Helpers</span>
             </a>
         </li>
     </ul>

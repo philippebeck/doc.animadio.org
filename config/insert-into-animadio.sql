@@ -824,11 +824,11 @@ VALUES
 INSERT INTO Media
 (media,     screen)
 VALUES
-('xs',      'All'),
+('tn',      'All'),
 ('sm',      'min-width: 576px'),
 ('md',      'min-width: 768px'),
 ('lg',      'min-width: 992px'),
-('xl',      'min-width: 1200px');
+('wd',      'min-width: 1200px');
 
 INSERT INTO Class
 (class,                 part_id,  source_id,    property_id,  valor_id,     media_id, concat)

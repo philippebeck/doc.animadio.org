@@ -1,0 +1,37 @@
+<article class="menu-target4">
+    <h4>Padding</h4>
+
+    <section class="card-black">
+        <h5>Pad</h5>
+        <p>Pad classes are made to provide paddings, add a box keywords to use it as a special effect !</p>
+        <a class="btn-black" href="https://github.com/animadio/animadio/blob/master/src/box" title="View SCSS Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-css3 fa-lg" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <table class="table">
+        <caption>Pad Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th>Value</th>
+            <th>Screen</th>
+            <th>Concat</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for pad in allPadClasses %}
+            <tr>
+                <th>{{ pad.class }}</th>
+                <td>{{ pad.property }}</td>
+                <td>{{ pad.valor }}</td>
+                <td>{{ pad.screen }}</td>
+                <td>{{ pad.concat|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</article>

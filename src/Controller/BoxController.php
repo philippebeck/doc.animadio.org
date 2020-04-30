@@ -78,7 +78,7 @@ class BoxController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render('box.twig', [
+        return $this->render('main/box.twig', [
             'allContainerClasses'   => $this->allContainerClasses,
             'allMarginClasses'      => $this->allMarginClasses,
             'allBorderClasses'      => $this->allBorderClasses,

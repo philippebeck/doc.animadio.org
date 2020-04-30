@@ -78,7 +78,7 @@ class HelpersController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render('helpers.twig', [
+        return $this->render('main/helpers.twig', [
             'allFontClasses'    => $this->allFontClasses,
             'allAlignClasses'   => $this->allAlignClasses,
             'allDecoClasses'    => $this->allDecoClasses,

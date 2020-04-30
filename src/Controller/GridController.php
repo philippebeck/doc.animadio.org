@@ -57,7 +57,7 @@ class GridController extends MainController
          */
         public function defaultMethod()
     {
-        return $this->render('grid.twig', [
+        return $this->render('main/grid.twig', [
             'allGridClasses'    => $this->allGridClasses,
             'allFlexClasses'    => $this->allFlexClasses,
             'allPlaceClasses'   => $this->allPlaceClasses

@@ -92,7 +92,7 @@ class ElementsController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render('elements.twig', [
+        return $this->render('main/elements.twig', [
             'allBtnClasses'         => $this->allBtnClasses,
             'allCardClasses'        => $this->allCardClasses,
             'allFootClasses'        => $this->allFootClasses,

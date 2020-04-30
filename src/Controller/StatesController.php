@@ -71,7 +71,7 @@ class StatesController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render('states.twig', [
+        return $this->render('main/states.twig', [
             'allAnimaClasses'       => $this->allAnimaClasses,
             'allBgClasses'          => $this->allBgClasses,
             'allColorClasses'       => $this->allColorClasses,

@@ -22,6 +22,6 @@ class GlobalController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render('global.twig');
+        return $this->render('main/global.twig');
     }
 }

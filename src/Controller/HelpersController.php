@@ -50,7 +50,7 @@ class HelpersController extends MainController
     public function __construct()
     {
         parent::__construct();
-        $allHelpersClasses = ModelFactory::getModel('Class')->listClasses(5);
+        $allHelpersClasses = ModelFactory::getModel('Class')->listClasses(4);
 
         foreach ($allHelpersClasses as $helpersClass) {
             switch ($helpersClass['source']) {

@@ -45,7 +45,7 @@ class StatesController extends MainController
     public function __construct()
     {
         parent::__construct();
-        $allStatesClasses = ModelFactory::getModel('Class')->listClasses(4);
+        $allStatesClasses = ModelFactory::getModel('Class')->listClasses(3);
 
         foreach ($allStatesClasses as $statesClass) {
             switch ($statesClass['source']) {

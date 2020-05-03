@@ -22,22 +22,22 @@ class StatesController extends MainController
     /**
      * @var array
      */
-    private $allBgClasses  = array();
-
-    /**
-     * @var array
-     */
-    private $allColorClasses = array();
-
-    /**
-     * @var array
-     */
     private $allDisplayClasses = array();
 
     /**
      * @var array
      */
     private $allPositionClasses = array();
+
+    /**
+     * @var array
+     */
+    private $allBgClasses  = array();
+
+    /**
+     * @var array
+     */
+    private $allColorClasses = array();
 
     /**
      * StatesController constructor.
@@ -51,13 +51,13 @@ class StatesController extends MainController
             switch ($statesClass['source']) {
                 case 'anima': $this->allAnimaClasses[] = $statesClass;
                     break;
-                case 'bg': $this->allBgClasses[] = $statesClass;
-                    break;
-                case 'color': $this->allColorClasses[] = $statesClass;
-                    break;
                 case 'display': $this->allDisplayClasses[] = $statesClass;
                     break;
                 case 'position': $this->allPositionClasses[] = $statesClass;
+                    break;
+                case 'bg': $this->allBgClasses[] = $statesClass;
+                    break;
+                case 'color': $this->allColorClasses[] = $statesClass;
                     break;
             }
         }
@@ -73,10 +73,10 @@ class StatesController extends MainController
     {
         return $this->render('main/states.twig', [
             'allAnimaClasses'       => $this->allAnimaClasses,
-            'allBgClasses'          => $this->allBgClasses,
-            'allColorClasses'       => $this->allColorClasses,
             'allDisplayClasses'     => $this->allDisplayClasses,
-            'allPositionClasses'    => $this->allPositionClasses
+            'allPositionClasses'    => $this->allPositionClasses,
+            'allBgClasses'          => $this->allBgClasses,
+            'allColorClasses'       => $this->allColorClasses
         ]);
     }
 }

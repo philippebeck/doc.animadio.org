@@ -1,0 +1,37 @@
+<article class="menu-target5">
+    <h4>Height</h4>
+
+    <section class="card-black">
+        <h5>Height</h5>
+        <p>Height classes are made to provide heights, add a box keywords to use it as a special effect !</p>
+        <a class="btn-black" href="https://github.com/animadio/animadio/blob/master/src/box" title="View SCSS Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-css3 fa-lg" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <table class="table">
+        <caption>Height Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th>Value</th>
+            <th>Screen</th>
+            <th>Concat</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for height in allHeightClasses %}
+            <tr>
+                <th>{{ height.class }}</th>
+                <td>{{ height.property }}</td>
+                <td>{{ height.valor }}</td>
+                <td>{{ height.screen }}</td>
+                <td>{{ height.concat|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</article>

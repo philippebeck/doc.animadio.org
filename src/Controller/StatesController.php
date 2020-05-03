@@ -22,26 +22,6 @@ class StatesController extends MainController
     /**
      * @var array
      */
-    private $allBgClasses  = array();
-
-    /**
-     * @var array
-     */
-    private $allBordClasses = array();
-
-    /**
-     * @var array
-     */
-    private $allColorClasses = array();
-
-    /**
-     * @var array
-     */
-    private $allDecoClasses = array();
-
-    /**
-     * @var array
-     */
     private $allDisplayClasses = array();
 
     /**
@@ -52,12 +32,12 @@ class StatesController extends MainController
     /**
      * @var array
      */
-    private $allShaboxClasses = array();
+    private $allBgClasses  = array();
 
     /**
      * @var array
      */
-    private $allShatexClasses = array();
+    private $allColorClasses = array();
 
     /**
      * StatesController constructor.
@@ -65,27 +45,19 @@ class StatesController extends MainController
     public function __construct()
     {
         parent::__construct();
-        $allStatesClasses = ModelFactory::getModel('Class')->listClasses(4);
+        $allStatesClasses = ModelFactory::getModel('Class')->listClasses(3);
 
         foreach ($allStatesClasses as $statesClass) {
             switch ($statesClass['source']) {
                 case 'anima': $this->allAnimaClasses[] = $statesClass;
                     break;
-                case 'bg': $this->allBgClasses[] = $statesClass;
-                    break;
-                case 'bord': $this->allBordClasses[] = $statesClass;
-                    break;
-                case 'color': $this->allColorClasses[] = $statesClass;
-                    break;
-                case 'deco': $this->allDecoClasses[] = $statesClass;
-                    break;
                 case 'display': $this->allDisplayClasses[] = $statesClass;
                     break;
                 case 'position': $this->allPositionClasses[] = $statesClass;
                     break;
-                case 'shabox': $this->allShaboxClasses[] = $statesClass;
+                case 'bg': $this->allBgClasses[] = $statesClass;
                     break;
-                case 'shatex': $this->allShatexClasses[] = $statesClass;
+                case 'color': $this->allColorClasses[] = $statesClass;
                     break;
             }
         }
@@ -99,16 +71,12 @@ class StatesController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render('states.twig', [
+        return $this->render('main/states.twig', [
             'allAnimaClasses'       => $this->allAnimaClasses,
-            'allBgClasses'          => $this->allBgClasses,
-            'allBordClasses'        => $this->allBordClasses,
-            'allColorClasses'       => $this->allColorClasses,
-            'allDecoClasses'        => $this->allDecoClasses,
             'allDisplayClasses'     => $this->allDisplayClasses,
             'allPositionClasses'    => $this->allPositionClasses,
-            'allShaboxClasses'      => $this->allShaboxClasses,
-            'allShatexClasses'      => $this->allShatexClasses
+            'allBgClasses'          => $this->allBgClasses,
+            'allColorClasses'       => $this->allColorClasses
         ]);
     }
 }

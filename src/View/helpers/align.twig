@@ -1,0 +1,37 @@
+<article class="menu-target2">
+    <h4>Align</h4>
+
+    <section class="card-gray">
+        <h5>Align</h5>
+        <p>Align classes are made to provide text align, add global to use for children !</p>
+        <a class="btn-gray" href="https://github.com/animadio/animadio/blob/master/src/helpers" title="View SCSS Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-css3 fa-lg" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <table class="table">
+        <caption>Align Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th>Value</th>
+            <th>Screen</th>
+            <th>Concat</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for align in allAlignClasses %}
+            <tr>
+                <th>{{ align.class }}</th>
+                <td>{{ align.property }}</td>
+                <td>{{ align.valor }}</td>
+                <td>{{ align.screen }}</td>
+                <td>{{ align.concat|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</article>

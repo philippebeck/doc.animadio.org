@@ -9,13 +9,13 @@
 <article>
     <h2>Elements</h2>
 
-    <section class="card">
+    <section class="card-purple">
         <figure>
             <img src="img/logo.png" alt="Animadio Logo">
         </figure>
         <h3>Elements Usage</h3>
         <p>To use Elements feature, you have to write only one class for each element, but you need to follow the HTML5 semantic rules in order to get the good effects.</p>
-        <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@1.1.5/dist/animadio-elements.css" title="Access to Animadio Elements CDN" rel="noreferrer noopener" target="_blank">
+        <a class="btn-purple" href="https://cdn.jsdelivr.net/npm/animadio@2.0.3/dist/animadio-elements.css" title="Access to Animadio Elements CDN" rel="noreferrer noopener" target="_blank">
             Elements CDN
         </a>
     </section>
@@ -28,7 +28,6 @@
     <input id="menu-radio6" class="menu-radio6" type="radio" name="menu">
     <input id="menu-radio7" class="menu-radio7" type="radio" name="menu">
     <input id="menu-radio8" class="menu-radio8" type="radio" name="menu">
-    <input id="menu-radio9" class="menu-radio9" type="radio" name="menu">
 
     <nav class="menu">
         <label for="menu-radio1" title="Show Btn Classes">
@@ -59,10 +58,6 @@
             Navbar
             <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
         </label>
-        <label for="menu-radio8" title="Show Slider Classes">
-            Slider
-            <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
-        </label>
         <label for="menu-radio9" title="Show Table Classes">
             Table
             <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
@@ -79,7 +74,6 @@
         {{ include("elements/gallery.twig") }}
         {{ include("elements/menu.twig") }}
         {{ include("elements/navbar.twig") }}
-        {{ include("elements/slider.twig") }}
         {{ include("elements/table.twig") }}
 
     </section>

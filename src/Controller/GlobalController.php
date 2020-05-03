@@ -15,34 +15,6 @@ use Twig\Error\SyntaxError;
 class GlobalController extends MainController
 {
     /**
-     * @var array
-     */
-    private $allBoxClasses = array();
-
-    /**
-     * @var array
-     */
-    private $allHelpersClasses  = array();
-
-    /**
-     * StatesController constructor.
-     */
-    public function __construct()
-    {
-        parent::__construct();
-        $allGlobalClasses = ModelFactory::getModel('Class')->listClasses(1);
-
-        foreach ($allGlobalClasses as $globalClass) {
-            switch ($globalClass['source']) {
-                case 'box': $this->allBoxClasses[] = $globalClass;
-                    break;
-                case 'helpers': $this->allHelpersClasses[] = $globalClass;
-                    break;
-            }
-        }
-    }
-
-    /**
      * @return string
      * @throws LoaderError
      * @throws RuntimeError
@@ -50,9 +22,6 @@ class GlobalController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render('global.twig', [
-            'allBoxClasses'         => $this->allBoxClasses,
-            'allHelpersClasses'     => $this->allHelpersClasses
-        ]);
+        return $this->render('main/global.twig');
     }
 }

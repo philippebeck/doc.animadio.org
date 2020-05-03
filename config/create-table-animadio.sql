@@ -10,6 +10,14 @@ CREATE TABLE Part
 )
     ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
+CREATE TABLE Media
+(
+    id          TINYINT         UNSIGNED    PRIMARY KEY     AUTO_INCREMENT,
+    media       CHAR(2)         NOT NULL    UNIQUE,
+    screen      VARCHAR(20)     NOT NULL    UNIQUE
+)
+    ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
 CREATE TABLE Source
 (
     id          TINYINT         UNSIGNED    PRIMARY KEY     AUTO_INCREMENT,
@@ -28,14 +36,6 @@ CREATE TABLE Valor
 (
     id          SMALLINT        UNSIGNED    PRIMARY KEY     AUTO_INCREMENT,
     valor       VARCHAR(50)     NOT NULL    UNIQUE
-)
-    ENGINE=INNODB DEFAULT CHARSET=UTF8;
-
-CREATE TABLE Media
-(
-    id          TINYINT         UNSIGNED    PRIMARY KEY     AUTO_INCREMENT,
-    media       CHAR(2)         NOT NULL    UNIQUE,
-    screen      VARCHAR(20)     NOT NULL    UNIQUE
 )
     ENGINE=INNODB DEFAULT CHARSET=UTF8;
 

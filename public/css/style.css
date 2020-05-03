@@ -1,7 +1,7 @@
 /***** STYLE *****/
 
 body {
-  --body-font-family: 'Text Me One', sans-serif;
+  --sans-serif-font-family: 'Text Me One', sans-serif;
   --body-background-color: Lavender;
 }
 
@@ -11,7 +11,7 @@ h3,
 h4,
 h5,
 h6 {
-  --title-font-family: 'Cinzel', serif;
+  --serif-font-family: 'Cinzel', serif;
 }
 
 h1 {
@@ -22,26 +22,14 @@ h2 {
   color: var(--green);
 }
 
-table {
-  --table-font-family: 'Share Tech Mono', monospace;
-}
-
+table,
 code,
 pre {
-  --code-font-family: 'Share Tech Mono', monospace;
+  --monospace-font-family: 'Share Tech Mono', monospace;
 
   text-align: initial;
 }
 
 [class*="nav"] {
-  --navbar-background-color: var(--sapphire);
-}
-
-.slider {
-  --keyframes-content1: url(https://animadio.org/img/data/numbers/1.png);
-  --keyframes-content2: url(https://animadio.org/img/data/numbers/2.png);
-  --keyframes-content3: url(https://animadio.org/img/data/numbers/3.png);
-  --keyframes-content4: url(https://animadio.org/img/data/numbers/4.png);
-  --keyframes-content5: url(https://animadio.org/img/data/numbers/5.png);
-  --slider-check-play-animation: 20s linear;
+  --navbar-background-color: var(--blue-dark);
 }

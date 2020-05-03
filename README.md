@@ -8,7 +8,7 @@
 
 This is the Official Documentation about the CSS Framework Animadio !
 
-**The version 1.0.0 of this documentation is under construction until the end of August...**
+**This documentation is under construction until the end of June...**
 
 ## Summary
 

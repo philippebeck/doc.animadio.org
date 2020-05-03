@@ -56,11 +56,11 @@ class BoxController extends MainController
             switch ($boxClass['source']) {
                 case 'container': $this->allContainerClasses[] = $boxClass;
                     break;
-                case 'margin': $this->allMarginClasses[] = $boxClass;
+                case 'mar': $this->allMarginClasses[] = $boxClass;
                     break;
-                case 'border': $this->allBorderClasses[] = $boxClass;
+                case 'bord': $this->allBorderClasses[] = $boxClass;
                     break;
-                case 'padding': $this->allPaddingClasses[] = $boxClass;
+                case 'pad': $this->allPaddingClasses[] = $boxClass;
                     break;
                 case 'height': $this->allHeightClasses[] = $boxClass;
                     break;

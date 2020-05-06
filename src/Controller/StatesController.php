@@ -48,18 +48,26 @@ class StatesController extends MainController
         $allStatesClasses = ModelFactory::getModel('Class')->listClasses(3);
 
         foreach ($allStatesClasses as $statesClass) {
-            switch ($statesClass['source']) {
-                case 'anima': $this->allAnimaClasses[] = $statesClass;
-                    break;
-                case 'display': $this->allDisplayClasses[] = $statesClass;
-                    break;
-                case 'position': $this->allPositionClasses[] = $statesClass;
-                    break;
-                case 'bg': $this->allBgClasses[] = $statesClass;
-                    break;
-                case 'color': $this->allColorClasses[] = $statesClass;
-                    break;
-            }
+            $this->getClass($statesClass);
+        }
+    }
+
+    /**
+     * @param array $class
+     */
+    private function getClass(array $class)
+    {
+        switch ($class['source']) {
+            case 'anima': $this->allAnimaClasses[] = $class;
+                break;
+            case 'display': $this->allDisplayClasses[] = $class;
+                break;
+            case 'position': $this->allPositionClasses[] = $class;
+                break;
+            case 'bg': $this->allBgClasses[] = $class;
+                break;
+            case 'color': $this->allColorClasses[] = $class;
+                break;
         }
     }
 

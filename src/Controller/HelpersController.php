@@ -53,20 +53,28 @@ class HelpersController extends MainController
         $allHelpersClasses = ModelFactory::getModel('Class')->listClasses(4);
 
         foreach ($allHelpersClasses as $helpersClass) {
-            switch ($helpersClass['source']) {
-                case 'font': $this->allFontClasses[] = $helpersClass;
-                    break;
-                case 'align': $this->allAlignClasses[] = $helpersClass;
-                    break;
-                case 'deco': $this->allDecoClasses[] = $helpersClass;
-                    break;
-                case 'shatex': $this->allShatexClasses[] = $helpersClass;
-                    break;
-                case 'shabox': $this->allShaboxClasses[] = $helpersClass;
-                    break;
-                case 'cursor': $this->allCursorClasses[] = $helpersClass;
-                    break;
-            }
+            $this->getClass($helpersClass);
+        }
+    }
+
+    /**
+     * @param array $class
+     */
+    private function getClass(array $class)
+    {
+        switch ($class['source']) {
+            case 'font': $this->allFontClasses[] = $class;
+                break;
+            case 'align': $this->allAlignClasses[] = $class;
+                break;
+            case 'deco': $this->allDecoClasses[] = $class;
+                break;
+            case 'shatex': $this->allShatexClasses[] = $class;
+                break;
+            case 'shabox': $this->allShaboxClasses[] = $class;
+                break;
+            case 'cursor': $this->allCursorClasses[] = $class;
+                break;
         }
     }
 

@@ -38,14 +38,22 @@ class GridController extends MainController
         $allGridClasses = ModelFactory::getModel('Class')->listClasses(2);
 
         foreach ($allGridClasses as $gridClass) {
-            switch ($gridClass['source']) {
-                case 'grid': $this->allGridClasses[] = $gridClass;
-                    break;
-                case 'flex': $this->allFlexClasses[] = $gridClass;
-                    break;
-                case 'place': $this->allPlaceClasses[] = $gridClass;
-                    break;
-            }
+            $this->getClass($gridClass);
+        }
+    }
+
+    /**
+     * @param array $class
+     */
+    public function getClass(array $class)
+    {
+        switch ($class['source']) {
+            case 'grid': $this->allGridClasses[] = $class;
+                break;
+            case 'flex': $this->allFlexClasses[] = $class;
+                break;
+            case 'place': $this->allPlaceClasses[] = $class;
+                break;
         }
     }
 

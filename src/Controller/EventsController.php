@@ -8,10 +8,10 @@ use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 
 /**
- * Class HomeController
+ * Class EventsController
  * @package App\Controller
  */
-class HomeController extends MainController
+class EventsController extends MainController
 {
     /**
      * @return string
@@ -20,7 +20,7 @@ class HomeController extends MainController
      * @throws SyntaxError
      */
     public function defaultMethod()
-  {
-    return $this->render('home.twig');
-  }
+    {
+        return $this->render('main/events.twig');
+    }
 }

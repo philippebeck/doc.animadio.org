@@ -12,5 +12,5 @@ if (session_status() === PHP_SESSION_NONE) {
 
 // Debugger::enable();
 
-$frontcontroller = new FrontController();
-$frontcontroller->run();
+$frontController = new FrontController();
+$frontController->run();

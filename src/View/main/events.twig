@@ -1,0 +1,31 @@
+{% extends 'layout/layout.twig' %}
+
+{% block subtitle %}Events{% endblock %}
+
+{% block description %}Animadio Documentation about Animadio Events : slider & canvas{% endblock %}
+
+{% block main %}
+    <article>
+        <h2>Events</h2>
+
+        <section class="card-purple">
+            <figure>
+                <img src="img/logo.png" alt="Animadio Logo">
+            </figure>
+            <h3>Events Usage</h3>
+            <p>To use the Events feature, you need to load Animadio.js to manage Events with JavaScript.</p>
+            <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.1.4/dist/animadio-events.css" title="Access to Animadio Events CDN" rel="noreferrer noopener" target="_blank">
+                <i class="fas fa-server fa-lg" aria-hidden="true"></i>
+            </a>
+            <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio.js@0.1.18/dist/animadio.js" title="Access to Animadio JS CDN" rel="noreferrer noopener" target="_blank">
+                <i class="fas fa-server fa-lg" aria-hidden="true"></i>
+            </a>
+            <a class="btn" href="https://github.com/animadio/animadio/blob/master/dist/animadio-events.css" title="View CSS Library @GitHub" rel="noreferrer noopener" target="_blank">
+                <i class="fab fa-css3 fa-lg" aria-hidden="true"></i>
+            </a>
+            <a class="btn" href="https://github.com/animadio/animadio.js/blob/master/dist/animadio.js" title="View JS Library @GitHub" rel="noreferrer noopener" target="_blank">
+                <i class="fab fa-js-square fa-lg" aria-hidden="true"></i>
+            </a>
+        </section>
+    </article>
+{% endblock %}

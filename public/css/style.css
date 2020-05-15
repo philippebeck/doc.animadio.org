@@ -1,32 +1,18 @@
 /***** STYLE *****/
 
-body {
+:root {
   --sans-serif-font-family: 'Text Me One', sans-serif;
-  --body-background-color: Lavender;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   --serif-font-family: 'Cinzel', serif;
+  --monospace-font-family: 'Share Tech Mono', monospace;
 }
 
-h1 {
-  color: var(--purple);
-}
-
-h2 {
-  color: var(--green);
+body {
+  --body-background-color: Lavender;
 }
 
 table,
 code,
 pre {
-  --monospace-font-family: 'Share Tech Mono', monospace;
-
   text-align: initial;
 }
 

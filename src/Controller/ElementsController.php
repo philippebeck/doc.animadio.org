@@ -63,24 +63,32 @@ class ElementsController extends MainController
         $allElementsClasses = ModelFactory::getModel('Class')->listClasses(3);
 
         foreach ($allElementsClasses as $elementsClass) {
-            switch ($elementsClass['source']) {
-                case 'btn': $this->allBtnClasses[] = $elementsClass;
-                    break;
-                case 'card': $this->allCardClasses[] = $elementsClass;
-                    break;
-                case 'foot': $this->allFootClasses[] = $elementsClass;
-                    break;
-                case 'form': $this->allFormClasses[] = $elementsClass;
-                    break;
-                case 'gallery': $this->allGalleryClasses[] = $elementsClass;
-                    break;
-                case 'menu': $this->allMenuClasses[] = $elementsClass;
-                    break;
-                case 'navbar': $this->allNavbarClasses[] = $elementsClass;
-                    break;
-                case 'table': $this->allTableClasses[] = $elementsClass;
-                    break;
-            }
+            $this->getClass($elementsClass);
+        }
+    }
+
+    /**
+     * @param array $class
+     */
+    private function getClass(array $class)
+    {
+        switch ($class['source']) {
+            case 'btn': $this->allBtnClasses[] = $class;
+                break;
+            case 'card': $this->allCardClasses[] = $class;
+                break;
+            case 'foot': $this->allFootClasses[] = $class;
+                break;
+            case 'form': $this->allFormClasses[] = $class;
+                break;
+            case 'gallery': $this->allGalleryClasses[] = $class;
+                break;
+            case 'menu': $this->allMenuClasses[] = $class;
+                break;
+            case 'navbar': $this->allNavbarClasses[] = $class;
+                break;
+            case 'table': $this->allTableClasses[] = $class;
+                break;
         }
     }
 

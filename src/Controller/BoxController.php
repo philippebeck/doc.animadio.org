@@ -53,20 +53,28 @@ class BoxController extends MainController
         $allBoxClasses = ModelFactory::getModel('Class')->listClasses(1);
 
         foreach ($allBoxClasses as $boxClass) {
-            switch ($boxClass['source']) {
-                case 'container': $this->allContainerClasses[] = $boxClass;
-                    break;
-                case 'mar': $this->allMarginClasses[] = $boxClass;
-                    break;
-                case 'bord': $this->allBorderClasses[] = $boxClass;
-                    break;
-                case 'pad': $this->allPaddingClasses[] = $boxClass;
-                    break;
-                case 'height': $this->allHeightClasses[] = $boxClass;
-                    break;
-                case 'width': $this->allWidthClasses[] = $boxClass;
-                    break;
-            }
+            $this->getClass($boxClass);
+        }
+    }
+
+    /**
+     * @param array $class
+     */
+    private function getClass(array $class)
+    {
+        switch ($class['source']) {
+            case 'container': $this->allContainerClasses[] = $class;
+                break;
+            case 'mar': $this->allMarginClasses[] = $class;
+                break;
+            case 'bord': $this->allBorderClasses[] = $class;
+                break;
+            case 'pad': $this->allPaddingClasses[] = $class;
+                break;
+            case 'height': $this->allHeightClasses[] = $class;
+                break;
+            case 'width': $this->allWidthClasses[] = $class;
+                break;
         }
     }
 

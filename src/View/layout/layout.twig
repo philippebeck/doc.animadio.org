@@ -52,6 +52,6 @@
     {{ include('layout/footer.twig') }}
 
     <script src="node_modules/animadio.js/dist/animadio.js"></script>
-    <script src="js/script.js"></script>
+    {% block script %}{% endblock %}
 </body>
 </html>

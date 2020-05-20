@@ -4,28 +4,64 @@
 
 {% block description %}Animadio Documentation about Animadio Events : slider & canvas{% endblock %}
 
+{% block script %}<script src="js/events.js"></script>{% endblock %}
+
 {% block main %}
     <article>
         <h2>Events</h2>
 
         <section class="card-purple">
             <figure>
-                <img src="img/logo.png" alt="Animadio Logo">
+                <i class="fas fa-mouse fa-7x" aria-hidden="true"></i>
             </figure>
             <h3>Events Usage</h3>
             <p>To use the Events feature, you need to load Animadio.js to manage Events with JavaScript.</p>
-            <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.1.4/dist/animadio-events.css" title="Access to Animadio Events CDN" rel="noreferrer noopener" target="_blank">
-                <i class="fas fa-server fa-lg" aria-hidden="true"></i>
+            <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.2.0/dist/animadio-events.css" title="Access to Animadio Events CDN" rel="noreferrer noopener" target="_blank">
+                <i class="fas fa-server fa-lg color-sky color-blue-into" aria-hidden="true"></i>
             </a>
             <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio.js@0.1.18/dist/animadio.js" title="Access to Animadio JS CDN" rel="noreferrer noopener" target="_blank">
-                <i class="fas fa-server fa-lg" aria-hidden="true"></i>
+                <i class="fas fa-server fa-lg color-yellow color-orange-into" aria-hidden="true"></i>
             </a>
             <a class="btn" href="https://github.com/animadio/animadio/blob/master/dist/animadio-events.css" title="View CSS Library @GitHub" rel="noreferrer noopener" target="_blank">
-                <i class="fab fa-css3 fa-lg" aria-hidden="true"></i>
+                <i class="fab fa-css3 fa-lg color-sky color-blue-into" aria-hidden="true"></i>
             </a>
             <a class="btn" href="https://github.com/animadio/animadio.js/blob/master/dist/animadio.js" title="View JS Library @GitHub" rel="noreferrer noopener" target="_blank">
-                <i class="fab fa-js-square fa-lg" aria-hidden="true"></i>
+                <i class="fab fa-js-square fa-lg color-yellow color-orange-into" aria-hidden="true"></i>
             </a>
+        </section>
+
+        <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
+        <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
+        <input id="menu-radio3" class="menu-radio3" type="radio" name="menu" disabled>
+        <input id="menu-radio4" class="menu-radio4" type="radio" name="menu" disabled>
+
+        <nav class="menu">
+            <label for="menu-radio1" title="Show Slider Class">
+                Slider
+                <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+            </label>
+            <label for="menu-radio2" title="Show Canvas Class">
+                Canvas
+                <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+            </label>
+            <label for="menu-radio3" title="Input Class Doc will arrive soon...">
+                Input
+                <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+            </label>
+            <label for="menu-radio4" title="Ajax Class Doc will arrive soon...">
+                Ajax
+                <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+            </label>
+        </nav>
+
+        <section class="menu-relay">
+            <h3>Events Parts</h3>
+
+            {{ include("events/slider.twig") }}
+            {{ include("events/canvas.twig") }}
+            {{ include("events/input.twig") }}
+            {{ include("events/ajax.twig") }}
+
         </section>
     </article>
 {% endblock %}

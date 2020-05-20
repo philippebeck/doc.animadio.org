@@ -4,6 +4,8 @@
 
 {% block description %}Animadio Documentation about Animadio States : anima, display, position, bg & color{% endblock %}
 
+{% block script %}<script src="js/states.js"></script>{% endblock %}
+
 {% block main %}
 
 <article>
@@ -11,15 +13,15 @@
 
     <section class="card-purple">
         <figure>
-            <img src="img/logo.png" alt="Animadio Logo">
+            <i class="fas fa-cogs fa-7x" aria-hidden="true"></i>
         </figure>
         <h3>States Usage</h3>
         <p>To use States feature, you need to add the States keyword(s) after the States class(es) with a hyphens "-" between them in order to get the desired effect.</p>
-        <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.1.4/dist/animadio-states.css" title="Access to Animadio States CDN" rel="noreferrer noopener" target="_blank">
-            <i class="fas fa-server fa-lg" aria-hidden="true"></i>
+        <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.2.0/dist/animadio-states.css" title="Access to Animadio States CDN" rel="noreferrer noopener" target="_blank">
+            <i class="fas fa-server fa-lg color-sky color-blue-into" aria-hidden="true"></i>
         </a>
         <a class="btn" href="https://github.com/animadio/animadio/blob/master/dist/animadio-states.css" title="View CSS Library @GitHub" rel="noreferrer noopener" target="_blank">
-            <i class="fab fa-css3 fa-lg" aria-hidden="true"></i>
+            <i class="fab fa-css3 fa-lg color-sky color-blue-into" aria-hidden="true"></i>
         </a>
     </section>
 
@@ -151,9 +153,4 @@
 
     </section>
 </article>
-{% endblock %}
-
-{% block script %}
-<script src="node_modules/animadio.js/Animadio.js"></script>
-<script src="js/script.js"></script>
 {% endblock %}

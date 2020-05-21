@@ -18,20 +18,20 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for bord in allBorderClasses %}
+        {% for bord in borderClasses %}
             <tr>
                 <th>{{ bord.class }}</th>
-                <td>{{ bord.property }}</td>
                 <td>{{ bord.valor }}</td>
-                <td>{{ bord.screen }}</td>
+                <td>{{ bord.property }}</td>
+                <td>{{ bord.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ bord.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

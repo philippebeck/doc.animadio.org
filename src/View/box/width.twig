@@ -18,20 +18,20 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for width in allWidthClasses %}
+        {% for width in widthClasses %}
             <tr>
                 <th>{{ width.class }}</th>
-                <td>{{ width.property }}</td>
                 <td>{{ width.valor }}</td>
-                <td>{{ width.screen }}</td>
+                <td>{{ width.property }}</td>
+                <td>{{ width.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ width.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

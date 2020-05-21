@@ -18,20 +18,20 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for pad in allPaddingClasses %}
+        {% for pad in paddingClasses %}
             <tr>
                 <th>{{ pad.class }}</th>
-                <td>{{ pad.property }}</td>
                 <td>{{ pad.valor }}</td>
-                <td>{{ pad.screen }}</td>
+                <td>{{ pad.property }}</td>
+                <td>{{ pad.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ pad.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

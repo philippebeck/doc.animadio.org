@@ -18,21 +18,21 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for container in allContainerClasses %}
+        {% for container in containerClasses %}
             <tr>
                 <th>{{ container.class }}</th>
-                <td>{{ container.property }}</td>
                 <td>{{ container.valor }}</td>
-                <td>{{ container.screen }}</td>
-                <td>{{ container.concat|replace({'1': "yes", '0': "no"}) }}</td>
+                <td>{{ container.property }}</td>
+                <td>{{ container.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
+                <td>{{ container.concat|replace({'0': "no", '1': "yes"}) }}</td>
             </tr>
         {% endfor %}
         </tbody>

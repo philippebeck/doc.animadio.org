@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use Pam\Controller\MainController;
 use Pam\Model\Factory\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -12,72 +11,8 @@ use Twig\Error\SyntaxError;
  * Class HelpersController
  * @package App\Controller
  */
-class HelpersController extends MainController
+class HelpersController extends BaseController
 {
-    /**
-     * @var array
-     */
-    private $allFontClasses = array();
-
-    /**
-     * @var array
-     */
-    private $allAlignClasses = array();
-
-    /**
-     * @var array
-     */
-    private $allDecoClasses  = array();
-
-    /**
-     * @var array
-     */
-    private $allShatexClasses  = array();
-
-    /**
-     * @var array
-     */
-    private $allShaboxClasses = array();
-
-    /**
-     * @var array
-     */
-    private $allCursorClasses = array();
-
-    /**
-     * BoxController constructor.
-     */
-    public function __construct()
-    {
-        parent::__construct();
-        $allHelpersClasses = ModelFactory::getModel('Class')->listClasses(4);
-
-        foreach ($allHelpersClasses as $helpersClass) {
-            $this->getClass($helpersClass);
-        }
-    }
-
-    /**
-     * @param array $class
-     */
-    private function getClass(array $class)
-    {
-        switch ($class['source']) {
-            case 'font': $this->allFontClasses[] = $class;
-                break;
-            case 'align': $this->allAlignClasses[] = $class;
-                break;
-            case 'deco': $this->allDecoClasses[] = $class;
-                break;
-            case 'shatex': $this->allShatexClasses[] = $class;
-                break;
-            case 'shabox': $this->allShaboxClasses[] = $class;
-                break;
-            case 'cursor': $this->allCursorClasses[] = $class;
-                break;
-        }
-    }
-
     /**
      * @return string
      * @throws LoaderError
@@ -86,13 +21,17 @@ class HelpersController extends MainController
      */
     public function defaultMethod()
     {
+        $helpersClassesList = ModelFactory::getModel('Helpers')->listHelpersClasses();
+        $helpersClasses     = $this->getClasses($helpersClassesList);
+
         return $this->render('main/helpers.twig', [
-            'allFontClasses'    => $this->allFontClasses,
-            'allAlignClasses'   => $this->allAlignClasses,
-            'allDecoClasses'    => $this->allDecoClasses,
-            'allShatexClasses'  => $this->allShatexClasses,
-            'allShaboxClasses'  => $this->allShaboxClasses,
-            'allCursorClasses'  => $this->allCursorClasses
+            'fontClasses'   => $helpersClasses[1],
+            'transClasses'  => $helpersClasses[2],
+            'alignClasses'  => $helpersClasses[3],
+            'decoClasses'   => $helpersClasses[4],
+            'shatexClasses' => $helpersClasses[5],
+            'shaboxClasses' => $helpersClasses[6],
+            'cursorClasses' => $helpersClasses[7]
         ]);
     }
 }

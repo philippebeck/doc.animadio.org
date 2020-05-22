@@ -18,20 +18,20 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for font in allFontClasses %}
+        {% for font in fontClasses %}
             <tr>
                 <th>{{ font.class }}</th>
-                <td>{{ font.property }}</td>
                 <td>{{ font.valor }}</td>
-                <td>{{ font.screen }}</td>
+                <td>{{ font.property }}</td>
+                <td>{{ font.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ font.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

@@ -1,4 +1,4 @@
-<article class="menu-target2">
+<article class="menu-target3">
     <h4>Align</h4>
 
     <section class="card-gray">
@@ -18,20 +18,20 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for align in allAlignClasses %}
+        {% for align in alignClasses %}
             <tr>
                 <th>{{ align.class }}</th>
-                <td>{{ align.property }}</td>
                 <td>{{ align.valor }}</td>
-                <td>{{ align.screen }}</td>
+                <td>{{ align.property }}</td>
+                <td>{{ align.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ align.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

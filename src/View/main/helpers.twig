@@ -15,7 +15,7 @@
             </figure>
             <h3>Helpers Usage</h3>
             <p>To use Helpers feature, you need to add the Helpers keyword(s) after the Helpers class(es) with a hyphens "-" between them in order to get the desired effect.</p>
-            <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.2.0/dist/animadio-helpers.css" title="Access to Animadio Helpers CDN" rel="noreferrer noopener" target="_blank">
+            <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.2.2/dist/animadio-helpers.css" title="Access to Animadio Helpers CDN" rel="noreferrer noopener" target="_blank">
                 <i class="fas fa-server fa-lg color-sky color-blue-into" aria-hidden="true"></i>
             </a>
             <a class="btn" href="https://github.com/animadio/animadio/blob/master/dist/animadio-helpers.css" title="View CSS Library @GitHub" rel="noreferrer noopener" target="_blank">
@@ -57,29 +57,34 @@
         <input id="menu-radio4" class="menu-radio4" type="radio" name="menu">
         <input id="menu-radio5" class="menu-radio5" type="radio" name="menu">
         <input id="menu-radio6" class="menu-radio6" type="radio" name="menu">
+        <input id="menu-radio7" class="menu-radio7" type="radio" name="menu">
 
         <nav class="menu">
             <label for="menu-radio1" title="Show Font Classes">
                 Font
                 <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio2" title="Show Align Classes">
+            <label for="menu-radio2" title="Show Trans Classes">
+                Trans
+                <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+            </label>
+            <label for="menu-radio3" title="Show Align Classes">
                 Align
                 <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio3" title="Show Decoration Classes">
-                Decoration
+            <label for="menu-radio4" title="Show Deco Classes">
+                Deco
                 <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio4" title="Show Shatex Classes">
+            <label for="menu-radio5" title="Show Shatex Classes">
                 Shatex
                 <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio5" title="Show Shabox Classes">
+            <label for="menu-radio6" title="Show Shabox Classes">
                 Shabox
                 <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio6" title="Show Cursor Classes">
+            <label for="menu-radio7" title="Show Cursor Classes">
                 Cursor
                 <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
             </label>
@@ -89,8 +94,9 @@
             <h3>Helpers Parts</h3>
 
             {{ include("helpers/font.twig") }}
+            {{ include("helpers/trans.twig") }}
             {{ include("helpers/align.twig") }}
-            {{ include("helpers/decoration.twig") }}
+            {{ include("helpers/deco.twig") }}
             {{ include("helpers/shatex.twig") }}
             {{ include("helpers/shabox.twig") }}
             {{ include("helpers/cursor.twig") }}

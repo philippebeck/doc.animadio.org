@@ -1,4 +1,4 @@
-<article class="menu-target6">
+<article class="menu-target7">
     <h4>Cursor</h4>
 
     <section class="card-gray">
@@ -18,20 +18,20 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for cursor in allCursorClasses %}
+        {% for cursor in cursorClasses %}
             <tr>
                 <th>{{ cursor.class }}</th>
-                <td>{{ cursor.property }}</td>
                 <td>{{ cursor.valor }}</td>
-                <td>{{ cursor.screen }}</td>
+                <td>{{ cursor.property }}</td>
+                <td>{{ cursor.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ cursor.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

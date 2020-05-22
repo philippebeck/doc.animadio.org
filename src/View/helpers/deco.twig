@@ -1,4 +1,4 @@
-<article class="menu-target3">
+<article class="menu-target4">
     <h4>Decoration</h4>
 
     <section class="card-gray">
@@ -18,20 +18,20 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for deco in allDecoClasses %}
+        {% for deco in decoClasses %}
             <tr>
                 <th>{{ deco.class }}</th>
-                <td>{{ deco.property }}</td>
                 <td>{{ deco.valor }}</td>
-                <td>{{ deco.screen }}</td>
+                <td>{{ deco.property }}</td>
+                <td>{{ deco.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ deco.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

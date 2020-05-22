@@ -1,4 +1,4 @@
-USE sc1beph7875_animadio;
+USE animadio;
 
 CREATE TABLE HelpersProperty
 (

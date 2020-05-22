@@ -147,20 +147,20 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for anima in allAnimaClasses %}
+        {% for anima in animaClasses %}
             <tr>
                 <th>{{ anima.class }}</th>
-                <td>{{ anima.property }}</td>
                 <td>{{ anima.valor }}</td>
-                <td>{{ anima.screen }}</td>
+                <td>{{ anima.property }}</td>
+                <td>{{ anima.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ anima.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

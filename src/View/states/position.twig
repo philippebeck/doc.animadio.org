@@ -18,20 +18,20 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for position in allPositionClasses %}
+        {% for position in positionClasses %}
             <tr>
                 <th>{{ position.class }}</th>
-                <td>{{ position.property }}</td>
                 <td>{{ position.valor }}</td>
-                <td>{{ position.screen }}</td>
+                <td>{{ position.property }}</td>
+                <td>{{ position.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ position.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

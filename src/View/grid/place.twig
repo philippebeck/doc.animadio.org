@@ -51,20 +51,20 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for place in allPlaceClasses %}
+        {% for place in placeClasses %}
             <tr>
                 <th>{{ place.class }}</th>
-                <td>{{ place.property }}</td>
                 <td>{{ place.valor }}</td>
-                <td>{{ place.screen }}</td>
+                <td>{{ place.property }}</td>
+                <td>{{ place.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"})  }}</td>
                 <td>{{ place.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

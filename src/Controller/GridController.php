@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use Pam\Controller\MainController;
 use Pam\Model\Factory\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -12,63 +11,23 @@ use Twig\Error\SyntaxError;
  * Class GridController
  * @package App\Controller
  */
-class GridController extends MainController
+class GridController extends BaseController
 {
     /**
-     * @var array
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
-    private $allGridClasses = array();
-
-    /**
-     * @var array
-     */
-    private $allFlexClasses = array();
-
-    /**
-     * @var array
-     */
-    private $allPlaceClasses  = array();
-
-        /**
-         * StatesController constructor.
-         */
-        public function __construct()
+    public function defaultMethod()
     {
-        parent::__construct();
-        $allGridClasses = ModelFactory::getModel('Class')->listClasses(2);
+        $gridClassesList    = ModelFactory::getModel('Grid')->listGridClasses();
+        $gridClasses        = $this->getClasses($gridClassesList);
 
-        foreach ($allGridClasses as $gridClass) {
-            $this->getClass($gridClass);
-        }
-    }
-
-    /**
-     * @param array $class
-     */
-    public function getClass(array $class)
-    {
-        switch ($class['source']) {
-            case 'grid': $this->allGridClasses[] = $class;
-                break;
-            case 'flex': $this->allFlexClasses[] = $class;
-                break;
-            case 'place': $this->allPlaceClasses[] = $class;
-                break;
-        }
-    }
-
-        /**
-         * @return string
-         * @throws LoaderError
-         * @throws RuntimeError
-         * @throws SyntaxError
-         */
-        public function defaultMethod()
-    {
         return $this->render('main/grid.twig', [
-            'allGridClasses'    => $this->allGridClasses,
-            'allFlexClasses'    => $this->allFlexClasses,
-            'allPlaceClasses'   => $this->allPlaceClasses
+            'gridClasses'   => $gridClasses[1],
+            'flexClasses'   => $gridClasses[2],
+            'placeClasses'  => $gridClasses[3]
         ]);
     }
 }

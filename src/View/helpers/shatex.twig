@@ -1,4 +1,4 @@
-<article class="menu-target4">
+<article class="menu-target5">
     <h4>Shatex</h4>
 
     <section class="card-gray">
@@ -18,20 +18,20 @@
         <thead>
         <tr>
             <th>Class</th>
-            <th>Property</th>
             <th>Value</th>
-            <th>Screen</th>
+            <th>Property</th>
+            <th>Media</th>
             <th>Concat</th>
         </tr>
         </thead>
 
         <tbody>
-        {% for shatex in allShatexClasses %}
+        {% for shatex in shatexClasses %}
             <tr>
                 <th>{{ shatex.class }}</th>
-                <td>{{ shatex.property }}</td>
                 <td>{{ shatex.valor }}</td>
-                <td>{{ shatex.screen }}</td>
+                <td>{{ shatex.property }}</td>
+                <td>{{ shatex.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ shatex.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

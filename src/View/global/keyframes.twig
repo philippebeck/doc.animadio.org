@@ -21,23 +21,69 @@
             <li>in the Anima classes</li>
             <li>in your own stylesheet file</li>
         </ol>
+
+        <p>For all of them, you can overload variables in your css file to personalize each effect !</p>
     </section>
 
     <section>
         <h5>How to use Keyframes ?</h5>
 
-        <p>Just choose <strong>the required keyframes</strong> with its name in the following file :</p>
-        <a class="btn-green" href="https://github.com/animadio/animadio/blob/master/src/global/rules/_keyframes.scss" title="View all Keyframes" rel="noreferrer noopener" target="_blank">
-            <i class="fab fa-github-alt fa-3x" aria-hidden="true"></i>
-            Keyframes
-        </a>
+        <p>Just choose <strong>the required keyframes</strong> in the following table...</p>
 
-        <p>Then in your custom stylesheet file, write a CSS declaration with the necessary selector, the animation property, <strong>the keyframes name to use</strong> & the animation options you want !</p>
+        <p>Each keyframes have 2 more specific variables :</p>
+        <ul>
+            <li>One for opacity -> <code>--opacity-bounce</code> or <code>--opacity-grow</code> for example</li>
+            <li>One for origin -> <code>--origin-bounce</code> or <code>--origin-grow</code> for example</li>
+        </ul>
+
+        <p>All of them have the same default values :</p>
+        <ul>
+            <li>
+                <code>opacity: 0;</code>
+            </li>
+            <li>
+                <code>transform-origin: center;</code>
+            </li>
+        </ul>
 
         <p>You can find more informations about keyframes usage here :</p>
-        <a class="btn-blue" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes" title="@keyframes" rel="noreferrer noopener" target="_blank">Keyframes</a>
-        <a class="btn-blue" href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" title="Animation Property" rel="noreferrer noopener" target="_blank">Animation</a>
-        <a class="btn-blue" href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name" title="Animation Name Property" rel="noreferrer noopener" target="_blank">Animation Name</a>
-        <a class="btn-blue" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS Animation Usage" rel="noreferrer noopener" target="_blank">Keyframes Usage</a>
+        <ul class="row">
+            <li>
+                <a class="btn-blue" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes" title="@keyframes" rel="noreferrer noopener" target="_blank">Keyframes</a>
+            </li>
+            <li>
+                <a class="btn-blue" href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" title="Animation Property" rel="noreferrer noopener" target="_blank">Animation</a>
+            </li>
+            <li>
+                <a class="btn-blue" href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name" title="Animation Name Property" rel="noreferrer noopener" target="_blank">Animation Name</a>
+            </li>
+            <li>
+                <a class="btn-blue" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS Animation Usage" rel="noreferrer noopener" target="_blank">Keyframes Usage</a>
+            </li>
+        </ul>
     </section>
+
+    <table class="table">
+        <caption>Keyframes Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Variable</th>
+            <th>Value</th>
+            <th>Class</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for keyframe in keyframes %}
+            <tr>
+                <th>{{ keyframe.name }}</th>
+                <td>--transform-{{ keyframe.name }}</td>
+                <td>{{ keyframe.effect }}</td>
+                <td>anima-{{ keyframe.name }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

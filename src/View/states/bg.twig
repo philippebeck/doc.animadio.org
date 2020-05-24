@@ -12,30 +12,6 @@
         </a>
     </section>
 
-    <section>
-        <h5>Bg Demo</h5>
-
-        <p>Select a Background-Color to watch the effect...</p>
-        <ul class="container-90tn-80sm-70md-60sm-50wd font-monospace">
-            <li class="flex placo-between">
-                <label for="bg">Bg -------></label>
-                <select id="bg">
-                    <option selected value="">-</option>
-                    {% for bg in allBgClasses %}
-                    <option value="{{ bg.class }}">{{ bg.class|slice(3)|capitalize }}</option>
-                    {% endfor %}
-                </select>
-            </li>
-        </ul>
-
-        <input id="bg-check" class="button-check" type="checkbox">
-        <label for="bg-check"  class="button-purple">Bg !</label>
-
-        <figure id="bg-hub">
-            <img id="bg-goal" src="img/logo.png" alt="Animadio Logo">
-        </figure>
-    </section>
-
     <table class="table">
         <caption>Bg Datas</caption>
 

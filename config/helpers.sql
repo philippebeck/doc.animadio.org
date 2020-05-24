@@ -73,7 +73,6 @@ VALUES
 ('deco-blue',           '--blue',                   8,          4,      1,      0),
 ('deco-navy',           '--navy',                   8,          4,      1,      0),
 ('deco-purple',         '--purple',                 8,          4,      1,      0),
-('deco-gray',           '--gray',                   8,          4,      1,      0),
 ('shatex-sm',           '--text-shadow-sm',         9,          5,      1,      0),
 ('shatex-md',           '--text-shadow-md',         9,          5,      1,      0),
 ('shatex-lg',           '--text-shadow-lg',         9,          5,      1,      0),

@@ -1,0 +1,68 @@
+USE animadio;
+
+CREATE TABLE Elements
+(
+    id              TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
+    class           VARCHAR(20) NOT NULL    UNIQUE,
+    primary_value   VARCHAR(30) NOT NULL    UNIQUE,
+    secondary_value VARCHAR(30) NOT NULL,
+    third_value     VARCHAR(30) NOT NULL,
+    source          TINYINT     NOT NULL
+)
+    ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+INSERT INTO Elements
+(class,             primary_value,                  secondary_value,            third_value,                    source)
+VALUES
+('btn',             '--btn-color',                  '--white',                  'none',                         1),
+('btn-magenta',     '--magenta',                    '--white',                  'none',                         1),
+('btn-red',         '--red',                        '--white',                  'none',                         1),
+('btn-orange',      '--orange',                     '--white',                  'none',                         1),
+('btn-gold',        '--gold',                       '--white',                  'none',                         1),
+('btn-maroon',      '--maroon',                     '--white',                  'none',                         1),
+('btn-green',       '--green',                      '--white',                  'none',                         1),
+('btn-blue',        '--blue',                       '--white',                  'none',                         1),
+('btn-navy',        '--navy',                       '--white',                  'none',                         1),
+('btn-purple',      '--purple',                     '--white',                  'none',                         1),
+('btn-pink',        '--pink',                       '--white',                  'none',                         1),
+('btn-tomato',      '--tomato',                     '--white',                  'none',                         1),
+('btn-coral',       '--coral',                      '--white',                  'none',                         1),
+('btn-yellow',      '--yellow',                     '--white',                  'none',                         1),
+('btn-brown',       '--brown',                      '--white',                  'none',                         1),
+('btn-aqua',        '--aqua',                       '--white',                  'none',                         1),
+('btn-cyan',        '--cyan',                       '--white',                  'none',                         1),
+('btn-sky',         '--sky',                        '--white',                  'none',                         1),
+('btn-violet',      '--violet',                     '--white',                  'none',                         1),
+('btn-fb',          '--fb',                         '--white',                  'none',                         1),
+('btn-gh',          '--gh',                         '--white',                  'none',                         1),
+('btn-in',          '--in',                         '--white',                  'none',                         1),
+('btn-pp',          '--pp',                         '--white',                  'none',                         1),
+('btn-tw',          '--tw',                         '--white',                  'none',                         1),
+('btn-tn',          '--btn-tn-padding',             '--btn-tn-font-size',       'none',                         1),
+('btn-sm',          '--btn-sm-padding',             '--btn-sm-font-size',       'none',                         1),
+('btn-md',          '--btn-md-padding',             '--btn-md-font-size',       'none',                         1),
+('btn-lg',          '--btn-lg-padding',             '--btn-lg-font-size',       'none',                         1),
+('btn-wd',          '--btn-wd-padding',             '--btn-wd-font-size',       'none',                         1),
+('btn-square',      '--btn-square-border-radius',   '--btn-square-padding-top', 'btn-square-sizes',             1),
+('btn-round',       '--btn-round-border-radius',    '--btn-round-padding-top',  'btn-round-sizes',              1),
+('btn-curve',       '--btn-curve-border-radius',    '--btn-curve-padding-top',  'btn-curve-sizes',              1),
+('btn-circle',      '--btn-circle-border-radius',   '--btn-circle-padding-top', 'btn-circle-sizes',             1),
+('card',            '--card-background-color',      '--card-color',             '--card-title-text-shadow',     2),
+('card-magenta',    '--magenta-dark',               '--magenta',                '--card-magenta-text-shadow',   2),
+('card-red',        '--red-dark',                   '--red',                    '--card-red-text-shadow',       2),
+('card-orange',     '--orange-dark',                '--orange',                 '--card-orange-text-shadow',    2),
+('card-gold',       '--gold-dark',                  '--gold',                   '--card-gold-text-shadow',      2),
+('card-maroon',     '--maroon-dark',                '--maroon',                 '--card-maroon-text-shadow',    2),
+('card-green',      '--green-dark',                 '--green',                  '--card-green-text-shadow',     2),
+('card-blue',       '--blue-dark',                  '--blue',                   '--card-blue-text-shadow',      2),
+('card-navy',       '--navy-dark',                  '--navy',                   '--card-navy-text-shadow',      2),
+('card-purple',     '--purple-dark',                '--purple',                 '--card-purple-text-shadow',    2),
+('card-pink',       '--pink-dark',                  '--pink',                   '--card-pink-text-shadow',      2),
+('card-tomato',     '--tomato-dark',                '--tomato',                 '--card-tomato-text-shadow',    2),
+('card-coral',      '--coral-dark',                 '--coral',                  '--card-coral-text-shadow',     2),
+('card-yellow',     '--yellow-dark',                '--yellow',                 '--card-yellow-text-shadow',    2),
+('card-brown',      '--brown-dark',                 '--brown',                  '--card-brown-text-shadow',     2),
+('card-aqua',       '--aqua-dark',                  '--aqua',                   '--card-aqua-text-shadow',      2),
+('card-cyan',       '--cyan-dark',                  '--cyan',                   '--card-cyan-text-shadow',      2),
+('card-sky',        '--sky-dark',                   '--sky',                    '--card-sky-text-shadow',       2),
+('card-violet',     '--violet-dark',                '--violet',                 '--card-violet-text-shadow',    2);

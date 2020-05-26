@@ -21,13 +21,13 @@ class GridController extends BaseController
      */
     public function defaultMethod()
     {
-        $gridClassesList    = ModelFactory::getModel('Grid')->listGridClasses();
+        $gridClassesList    = ModelFactory::getModel("Grid")->listGridClasses();
         $gridClasses        = $this->getClasses($gridClassesList);
 
-        return $this->render('main/grid.twig', [
-            'gridClasses'   => $gridClasses[1],
-            'flexClasses'   => $gridClasses[2],
-            'placeClasses'  => $gridClasses[3]
+        return $this->render("main/grid.twig", [
+            "gridClasses"   => $gridClasses[1],
+            "flexClasses"   => $gridClasses[2],
+            "placeClasses"  => $gridClasses[3]
         ]);
     }
 }

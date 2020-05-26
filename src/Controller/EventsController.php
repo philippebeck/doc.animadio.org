@@ -21,6 +21,6 @@ class EventsController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render('main/events.twig');
+        return $this->render("main/events.twig");
     }
 }

@@ -21,16 +21,16 @@ class BoxController extends BaseController
      */
     public function defaultMethod()
     {
-        $boxClassesList = ModelFactory::getModel('Box')->listBoxClasses();
-        $boxClasses     = $this->getClasses($boxClassesList);
+        $boxClassList   = ModelFactory::getModel("Box")->listBoxClasses();
+        $boxClasses     = $this->getClasses($boxClassList);
 
-        return $this->render('main/box.twig', [
-            'containerClasses'   => $boxClasses[1],
-            'marginClasses'      => $boxClasses[2],
-            'borderClasses'      => $boxClasses[3],
-            'paddingClasses'     => $boxClasses[4],
-            'heightClasses'      => $boxClasses[5],
-            'widthClasses'       => $boxClasses[6]
+        return $this->render("main/box.twig", [
+            "containerClasses"   => $boxClasses[1],
+            "marginClasses"      => $boxClasses[2],
+            "borderClasses"      => $boxClasses[3],
+            "paddingClasses"     => $boxClasses[4],
+            "heightClasses"      => $boxClasses[5],
+            "widthClasses"       => $boxClasses[6]
         ]);
     }
 }

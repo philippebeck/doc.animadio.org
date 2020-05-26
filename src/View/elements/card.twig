@@ -14,4 +14,37 @@
             <i class="fab fa-sass fa-lg color-violet color-magenta-into" aria-hidden="true"></i>
         </a>
     </section>
+
+    <section>
+        <h5>Card Examples</h5>
+
+        {% for card in cardClasses %}
+            <section class="{{ card.class }}">
+                <figure>
+                    <img src="img/logo.png" alt="Animadio Logo">
+                </figure>
+                <h6>{{ card.class }}</h6>
+                <p>The only class to write inside HTML is "{{ card.class }}" for this card & you can add as many btn or button you want ! </p>
+                <a class="{{ card.class|replace({ 'card': "btn" }) }}" href="#">
+                    <i class="fas fa-stop-circle" aria-hidden="true"></i>
+                    {{ card.class|replace({ 'card': "btn" }) }}
+                </a>
+                <a class="{{ card.class|replace({ 'card': "button" }) }}" href="#">
+                    <i class="far fa-stop-circle" aria-hidden="true"></i>
+                    {{ card.class|replace({ 'card': "button" }) }}
+                </a>
+            </section>
+
+            <pre>
+<span class="color-silver">&lt;</span><span class="color-red">section</span><span class="color-coral font-italic"> class=</span>"{{ card.class }}"<span class="color-silver">&gt;</span>
+    <span class="color-silver">&lt;</span><span class="color-red">figure</span><span class="color-silver">&gt;</span>
+        <span class="color-silver">&lt;</span><span class="color-red">img</span><span class="color-coral font-italic"> src=</span>"#"<span class="color-coral font-italic"> alt=</span>"#"<span class="color-silver">&gt;</span>
+    <span class="color-silver">&lt;/</span><span class="color-red">figure</span><span class="color-silver">&gt;</span>
+    <span class="color-silver">&lt;</span><span class="color-red">h5</span><span class="color-silver">&gt;</span><span class="color-white">{{ card.class|replace({'-': " "})|title }} Title</span><span class="color-silver">&lt;/</span><span class="color-red">h5</span><span class="color-silver">&gt;</span>
+    <span class="color-silver">&lt;</span><span class="color-red">p</span><span class="color-silver">&gt;</span><span class="color-white">{{ card.class|replace({'-': " "})|title }} Message</span><span class="color-silver">&lt;/</span><span class="color-red">p</span><span class="color-silver">&gt;</span>
+    <span class="color-silver">&lt;</span><span class="color-red">a</span><span class="color-coral font-italic"> class=</span>"{{ card.class|replace({ 'card': "btn" }) }}"<span class="color-coral font-italic"> href=</span>"#"<span class="color-silver">&gt;</span><span class="color-white">{{ card.class|replace({'-': " "})|title }} Btn</span><span class="color-silver">&lt;/</span><span class="color-red">a</span><span class="color-silver">&gt;</span>
+    <span class="color-silver">&lt;</span><span class="color-red">a</span><span class="color-coral font-italic"> class=</span>"{{ card.class|replace({ 'card': "button" }) }}"<span class="color-coral font-italic"> href=</span>"#"<span class="color-silver">&gt;</span><span class="color-white">{{ card.class|replace({'-': " "})|title }} Button</span><span class="color-silver">&lt;/</span><span class="color-red">a</span><span class="color-silver">&gt;</span>
+<span class="color-silver">&lt;/</span><span class="color-red">section</span><span class="color-silver">&gt;</span></pre>
+        {% endfor %}
+    </section>
 </article>

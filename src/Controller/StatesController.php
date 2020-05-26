@@ -21,15 +21,15 @@ class StatesController extends BaseController
      */
     public function defaultMethod()
     {
-        $statesClassesList  = ModelFactory::getModel('States')->listStatesClasses();
+        $statesClassesList  = ModelFactory::getModel("States")->listStatesClasses();
         $statesClasses      = $this->getClasses($statesClassesList);
 
-        return $this->render('main/states.twig', [
-            'animaClasses'      => $statesClasses[1],
-            'displayClasses'    => $statesClasses[2],
-            'positionClasses'   => $statesClasses[3],
-            'bgClasses'         => $statesClasses[4],
-            'colorClasses'      => $statesClasses[5]
+        return $this->render("main/states.twig", [
+            "animaClasses"      => $statesClasses[1],
+            "displayClasses"    => $statesClasses[2],
+            "positionClasses"   => $statesClasses[3],
+            "bgClasses"         => $statesClasses[4],
+            "colorClasses"      => $statesClasses[5]
         ]);
     }
 }

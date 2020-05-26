@@ -22,8 +22,8 @@ class GlobalController extends MainController
      */
     public function defaultMethod()
     {
-        $keyframes = ModelFactory::getModel('Keyframes')->listData();
+        $keyframes = ModelFactory::getModel("Keyframes")->listData();
 
-        return $this->render('main/global.twig', ['keyframes' => $keyframes]);
+        return $this->render("main/global.twig", ["keyframes" => $keyframes]);
     }
 }

@@ -12,7 +12,7 @@ use Twig\Error\SyntaxError;
  * Class ElementsController
  * @package App\Controller
  */
-class ElementsController extends MainController
+class ElementsController extends BaseController
 {
     /**
      * @return string
@@ -22,6 +22,12 @@ class ElementsController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render('main/elements.twig');
+        $elementsClassList  = ModelFactory::getModel("Elements")->listData();
+        $elementsClasses    = $this->getClasses($elementsClassList);
+
+        return $this->render("main/elements.twig", [
+            "btnClasses"   => $elementsClasses[1],
+            "cardClasses"  => $elementsClasses[2]
+        ]);
     }
 }

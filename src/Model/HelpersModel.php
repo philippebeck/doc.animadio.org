@@ -12,9 +12,9 @@ class HelpersModel extends MainModel
 {
     public function listHelpersClasses()
     {
-        $query = 'SELECT * FROM Helpers
+        $query = "SELECT * FROM Helpers
                     INNER JOIN HelpersProperty ON Helpers.property = HelpersProperty.id
-                    ORDER BY Helpers.id';
+                    ORDER BY Helpers.id";
 
         return $this->database->getAllData($query);
     }

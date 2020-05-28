@@ -47,4 +47,28 @@
 <span class="color-silver">&lt;/</span><span class="color-red">section</span><span class="color-silver">&gt;</span></pre>
         {% endfor %}
     </section>
+
+    <table class="table">
+        <caption>Card Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Primary Value</th>
+            <th>Secondary Value</th>
+            <th>Third Value</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for card in cardClasses %}
+            <tr>
+                <th>{{ card.class }}</th>
+                <td>{{ card.primary_value }}</td>
+                <td>{{ card.secondary_value }}</td>
+                <td>{{ card.third_value }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

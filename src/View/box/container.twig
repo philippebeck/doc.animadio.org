@@ -31,7 +31,7 @@
                 <th>{{ container.class }}</th>
                 <td>{{ container.valor }}</td>
                 <td>{{ container.property }}</td>
-                <td>{{ container.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
+                <td>{{ container.media|replace({'1': "All", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ container.concat|replace({'0': "no", '1': "yes"}) }}</td>
             </tr>
         {% endfor %}

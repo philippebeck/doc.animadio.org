@@ -31,7 +31,7 @@
                 <th>{{ position.class }}</th>
                 <td>{{ position.valor }}</td>
                 <td>{{ position.property }}</td>
-                <td>{{ position.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
+                <td>{{ position.media|replace({'1': "All", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ position.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

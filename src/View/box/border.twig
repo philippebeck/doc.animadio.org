@@ -31,7 +31,7 @@
                 <th>{{ bord.class }}</th>
                 <td>{{ bord.valor }}</td>
                 <td>{{ bord.property }}</td>
-                <td>{{ bord.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
+                <td>{{ bord.media|replace({'1': "All", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ bord.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

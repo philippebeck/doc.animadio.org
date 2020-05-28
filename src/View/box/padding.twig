@@ -5,10 +5,10 @@
         <h5>Pad</h5>
         <p>Pad classes are made to provide paddings, add a box keywords to use it as a special effect !</p>
         <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/box/variables/_padding.var.scss" title="View SCSS Variables Source @GitHub" rel="noreferrer noopener" target="_blank">
-            <i class="fab fa-sass fa-lg color-violet color-magenta-into" aria-hidden="true"></i>
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
         </a>
         <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/box/classes/_padding.scss" title="View SCSS Classes Source @GitHub" rel="noreferrer noopener" target="_blank">
-            <i class="fab fa-sass fa-lg color-violet color-magenta-into" aria-hidden="true"></i>
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
         </a>
     </section>
 
@@ -31,7 +31,7 @@
                 <th>{{ pad.class }}</th>
                 <td>{{ pad.valor }}</td>
                 <td>{{ pad.property }}</td>
-                <td>{{ pad.media|replace({'1': "tn", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
+                <td>{{ pad.media|replace({'1': "All", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
                 <td>{{ pad.concat|replace({'1': "yes", '0': "no"}) }}</td>
             </tr>
         {% endfor %}

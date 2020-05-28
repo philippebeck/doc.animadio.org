@@ -5,13 +5,13 @@
         <h5>Card Infos</h5>
         <p>You can use Card classes with differents colors !</p>
         <a class="btn" href="https://codepen.io/animadio/pen/KKPmGvE" title="View HTML Example @CodePen" rel="noreferrer noopener" target="_blank">
-            <i class="fab fa-html5 fa-lg color-sky color-blue-into" aria-hidden="true"></i>
+            <i class="fab fa-html5 fa-lg color-white color-blue-into" aria-hidden="true"></i>
         </a>
         <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/elements/variables/_card.var.scss" title="View SCSS Variables Source @GitHub" rel="noreferrer noopener" target="_blank">
-            <i class="fab fa-sass fa-lg color-violet color-magenta-into" aria-hidden="true"></i>
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
         </a>
         <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/elements/classes/_card.scss" title="View SCSS Classes Source @GitHub" rel="noreferrer noopener" target="_blank">
-            <i class="fab fa-sass fa-lg color-violet color-magenta-into" aria-hidden="true"></i>
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
         </a>
     </section>
 
@@ -47,4 +47,28 @@
 <span class="color-silver">&lt;/</span><span class="color-red">section</span><span class="color-silver">&gt;</span></pre>
         {% endfor %}
     </section>
+
+    <table class="table">
+        <caption>Card Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Primary Value</th>
+            <th>Secondary Value</th>
+            <th>Third Value</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for card in cardClasses %}
+            <tr>
+                <th>{{ card.class }}</th>
+                <td>{{ card.primary_value }}</td>
+                <td>{{ card.secondary_value }}</td>
+                <td>{{ card.third_value }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </article>

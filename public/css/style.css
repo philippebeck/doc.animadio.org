@@ -19,3 +19,16 @@ pre {
 [class*="nav"] {
   --navbar-background-color: var(--blue-dark);
 }
+
+
+h2 {
+  color: var(--green);
+}
+
+h3 {
+  color: var(--navy);
+}
+
+h4 {
+  color: var(--blue);
+}

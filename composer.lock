@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad9c94505e048bdc4bc11c32e098d6ba",
+    "content-hash": "627c0cf382779b6a148fc45418263679",
     "packages": [
         {
             "name": "doctrine/lexer",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6"
+                "reference": "e864bbf5904cb8f5bb334f99209b48018522f042"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
-                "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/e864bbf5904cb8f5bb334f99209b48018522f042",
+                "reference": "e864bbf5904cb8f5bb334f99209b48018522f042",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2"
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^6.0",
@@ -66,7 +66,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-10-30T14:39:59+00:00"
+            "time": "2020-05-25T17:44:05+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -175,19 +175,21 @@
         },
         {
             "name": "philippebeck/pam",
-            "version": "3.2.2",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/philippebeck/pam.git",
-                "reference": "501b34ed10e173668529a48115048fcac8ef7e16"
+                "reference": "7e18b889ebb5fbf468fa49c99604de34517455de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/philippebeck/pam/zipball/501b34ed10e173668529a48115048fcac8ef7e16",
-                "reference": "501b34ed10e173668529a48115048fcac8ef7e16",
+                "url": "https://api.github.com/repos/philippebeck/pam/zipball/7e18b889ebb5fbf468fa49c99604de34517455de",
+                "reference": "7e18b889ebb5fbf468fa49c99604de34517455de",
                 "shasum": ""
             },
             "require": {
+                "ext-exif": "*",
+                "ext-gd": "*",
                 "google/recaptcha": "^1.2.4",
                 "php": "^7.3",
                 "swiftmailer/swiftmailer": "^6.2.3",
@@ -226,7 +228,7 @@
                 "superglobal",
                 "twig extension"
             ],
-            "time": "2020-05-21T18:15:02+00:00"
+            "time": "2020-06-09T07:54:04+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

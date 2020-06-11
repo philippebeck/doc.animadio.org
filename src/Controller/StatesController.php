@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Pam\Controller\MainController;
 use Pam\Model\Factory\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -11,7 +12,7 @@ use Twig\Error\SyntaxError;
  * Class StatesController
  * @package App\Controller
  */
-class StatesController extends BaseController
+class StatesController extends MainController
 {
     /**
      * @return string
@@ -21,8 +22,7 @@ class StatesController extends BaseController
      */
     public function defaultMethod()
     {
-        $statesClassesList  = ModelFactory::getModel("States")->listStatesClasses();
-        $statesClasses      = $this->getClasses($statesClassesList);
+        $statesClasses = $this->getArrayElements(ModelFactory::getModel("States")->listStatesClasses(), "source");
 
         return $this->render("main/states.twig", [
             "animaClasses"      => $statesClasses[1],

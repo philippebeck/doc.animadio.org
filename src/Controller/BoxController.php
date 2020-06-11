@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Pam\Controller\MainController;
 use Pam\Model\Factory\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -11,7 +12,7 @@ use Twig\Error\SyntaxError;
  * Class BoxController
  * @package App\Controller
  */
-class BoxController extends BaseController
+class BoxController extends MainController
 {
     /**
      * @return string
@@ -21,8 +22,7 @@ class BoxController extends BaseController
      */
     public function defaultMethod()
     {
-        $boxClassList   = ModelFactory::getModel("Box")->listBoxClasses();
-        $boxClasses     = $this->getClasses($boxClassList);
+        $boxClasses = $this->getArrayElements(ModelFactory::getModel("Box")->listBoxClasses(), "source");
 
         return $this->render("main/box.twig", [
             "containerClasses"   => $boxClasses[1],

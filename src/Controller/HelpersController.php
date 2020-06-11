@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Pam\Controller\MainController;
 use Pam\Model\Factory\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -11,7 +12,7 @@ use Twig\Error\SyntaxError;
  * Class HelpersController
  * @package App\Controller
  */
-class HelpersController extends BaseController
+class HelpersController extends MainController
 {
     /**
      * @return string
@@ -21,8 +22,7 @@ class HelpersController extends BaseController
      */
     public function defaultMethod()
     {
-        $helpersClassesList = ModelFactory::getModel("Helpers")->listHelpersClasses();
-        $helpersClasses     = $this->getClasses($helpersClassesList);
+        $helpersClasses = $this->getArrayElements(ModelFactory::getModel("Helpers")->listHelpersClasses(), "source");
 
         return $this->render("main/helpers.twig", [
             "fontClasses"   => $helpersClasses[1],

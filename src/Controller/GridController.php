@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Pam\Controller\MainController;
 use Pam\Model\Factory\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -11,7 +12,7 @@ use Twig\Error\SyntaxError;
  * Class GridController
  * @package App\Controller
  */
-class GridController extends BaseController
+class GridController extends MainController
 {
     /**
      * @return string
@@ -21,12 +22,11 @@ class GridController extends BaseController
      */
     public function defaultMethod()
     {
-        $gridClassesList    = ModelFactory::getModel("Grid")->listGridClasses();
-        $gridClasses        = $this->getClasses($gridClassesList);
+        $gridClasses = $this->getArrayElements(ModelFactory::getModel("Grid")->listGridClasses(), "source");
 
         return $this->render("main/grid.twig", [
             "gridClasses"   => $gridClasses[1],
-            "flexClasses"   => $gridClasses[2],
+            //"flexClasses"   => $gridClasses[2],
             "placeClasses"  => $gridClasses[3]
         ]);
     }

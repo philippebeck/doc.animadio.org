@@ -66,6 +66,20 @@
                 "parser",
                 "php"
             ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Flexer",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-05-25T17:44:05+00:00"
         },
         {
@@ -175,16 +189,16 @@
         },
         {
             "name": "philippebeck/pam",
-            "version": "3.3.1",
+            "version": "3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/philippebeck/pam.git",
-                "reference": "7e18b889ebb5fbf468fa49c99604de34517455de"
+                "reference": "b77b9514c54e20c3d88e088f8d2b552a26d41a0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/philippebeck/pam/zipball/7e18b889ebb5fbf468fa49c99604de34517455de",
-                "reference": "7e18b889ebb5fbf468fa49c99604de34517455de",
+                "url": "https://api.github.com/repos/philippebeck/pam/zipball/b77b9514c54e20c3d88e088f8d2b552a26d41a0e",
+                "reference": "b77b9514c54e20c3d88e088f8d2b552a26d41a0e",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +242,7 @@
                 "superglobal",
                 "twig extension"
             ],
-            "time": "2020-06-09T07:54:04+00:00"
+            "time": "2020-06-11T15:31:49+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

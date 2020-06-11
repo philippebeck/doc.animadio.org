@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS animadio;
+CREATE DATABASE animadio CHARACTER SET utf8;
+
 USE animadio;
 
 CREATE TABLE Keyframes
